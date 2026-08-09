@@ -10,7 +10,7 @@ get_manufacturing_materials <- function(bp) {
   if (is.null(acts)) return(NULL)  # no activities at all -- fine, skip
   if (!is.null(acts$manufacturing)) return(acts$manufacturing$materials)
   if (!is.null(acts[["1"]])) return(acts[["1"]]$materials)
-  return(NULL)  # has activities, just not a manufacturing one (e.g. copy/invention-only) -- also fine
+  return(NULL)
 }
 
 flatten_blueprints <- function(blueprints_list, snapshot_label) {
@@ -22,10 +22,17 @@ flatten_blueprints <- function(blueprints_list, snapshot_label) {
       skipped <<- skipped + 1L
       return(NULL)
     }
+    if (!is.null(names(mats)) && all(names(mats) != "")) {
+      material_ids <- as.integer(names(mats))
+      quantities <- sapply(mats, function(m) m$quantity)
+    } else {
+      material_ids <- sapply(mats, function(m) m$typeID)
+      quantities <- sapply(mats, function(m) m$quantity)
+    }
     data.table(
       type_id = as.integer(bp_id),
-      material_type_id = as.integer(names(mats)),
-      quantity = sapply(mats, function(m) m$quantity),
+      material_type_id = as.integer(material_ids),
+      quantity = as.numeric(quantities),
       snapshot = snapshot_label
     )
   })
@@ -43,7 +50,6 @@ flatten_types_fast <- function(types_list, snapshot_label) {
   data.table(type_id = as.integer(ids), type_name = names_vec, snapshot = snapshot_label)
 }
 
-# --- Window A: single snapshot ---
 bp_a <- readRDS("data/processed/sde/window_a_2014_blueprints.rds")
 types_a <- readRDS("data/processed/sde/window_a_2014_types.rds")
 
@@ -54,7 +60,6 @@ fwrite(blueprints_flat_a, "data/aggregated/sde_blueprints_window_a.csv")
 fwrite(types_flat_a, "data/aggregated/sde_types_window_a.csv")
 message(sprintf("Window A: %d blueprint-material rows, %d type rows", nrow(blueprints_flat_a), nrow(types_flat_a)))
 
-# --- Window B: all snapshots ---
 sde_b_bp_files <- list.files("data/processed/sde", pattern = "^window_b_.*_blueprints\\.rds$", full.names = TRUE)
 sde_b_types_files <- list.files("data/processed/sde", pattern = "^window_b_.*_types\\.rds$", full.names = TRUE)
 
