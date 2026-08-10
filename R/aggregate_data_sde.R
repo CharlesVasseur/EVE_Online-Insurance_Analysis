@@ -78,3 +78,19 @@ fwrite(blueprints_flat_b, "data/aggregated/sde_blueprints_window_b.csv")
 fwrite(types_flat_b, "data/aggregated/sde_types_window_b.csv")
 message(sprintf("Window B: %d blueprint-material rows, %d type rows across %d snapshots",
                 nrow(blueprints_flat_b), nrow(types_flat_b), length(sde_b_bp_files)))
+
+losses_a <- fread("data/aggregated/daily_losses_window_a.csv")
+losses_b <- fread("data/aggregated/daily_losses_window_b.csv")
+relevant_ship_ids <- unique(c(losses_a$ship_type_id, losses_b$ship_type_id))
+message(sprintf("%d distinct ship types appear in loss data", length(relevant_ship_ids)))
+
+types_a_full <- fread("data/aggregated/sde_types_window_a.csv")
+types_a_filtered <- types_a_full[type_id %in% relevant_ship_ids]
+fwrite(types_a_filtered, "data/aggregated/sde_types_window_a.csv")
+
+types_b_full <- fread("data/aggregated/sde_types_window_b.csv")
+types_b_filtered <- types_b_full[type_id %in% relevant_ship_ids]
+fwrite(types_b_filtered, "data/aggregated/sde_types_window_b.csv")
+
+message(sprintf("Window A types: %d -> %d rows | Window B types: %d -> %d rows",
+                nrow(types_a_full), nrow(types_a_filtered), nrow(types_b_full), nrow(types_b_filtered)))
