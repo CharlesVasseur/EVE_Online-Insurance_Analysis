@@ -47,7 +47,8 @@ flatten_types_fast <- function(types_list, snapshot_label) {
     n <- t$name$en %||% t$name %||% NA
     if (is.list(n)) NA else n
   })
-  data.table(type_id = as.integer(ids), type_name = names_vec, snapshot = snapshot_label)
+  group_vec <- sapply(types_list, function(t) t$groupID %||% NA)
+  data.table(type_id = as.integer(ids), type_name = names_vec, group_id = as.integer(group_vec), snapshot = snapshot_label)
 }
 
 bp_a <- readRDS("data/processed/sde/window_a_2014_blueprints.rds")
