@@ -19,8 +19,20 @@ All data is sourced from [EVE Ref](docs.everef.net):
 - *CCP Monthly Economic Report*: official economic indicators, available from 2016 onward
 - *Wars*: formal war declarations, used as background context rather than as the source of the case-study war dates above
 
-Raw data is not committed to this repository due to size. Running `R/download_data.R` reproduces it in full.
-Raw archive formats were inspected manually before writing the cleaning script.
+**Aggregated output**
+| File | Contents |
+|---|---|
+| `daily_losses_window_[a/b].csv` | Ship losses per day, by ship type (from killmails) |
+| `mineral_prices_window_[a/b].csv` | Jita reference prices for the 8 refined minerals used in blueprint manufacturing |
+| `sde_blueprints_window_[a/b].csv` | Material inputs per ship blueprint, per SDE snapshot |
+| `sde_types_window_[a/b].csv` | Ship type names and classification, filtered to types that actually appear in loss data |
+| `wars_window_[a/b]_active_by_week.csv` | Weekly count of formally-declared corp wars active (background context — see limitations) |
+| `wars_window_[a/b]_summary.csv` | Per-war lifetime destruction totals, where determinable within the study window |
+| `mer_insurance_window_b.csv` | CCP's own published insurance faucet data (Window B only — CCP's Monthly Economic Report only exists from 2016 onward) |
+
+
+Raw data or cleaned data is not committed to this repository due to size.
+Running `R/download_data.R`, then `R/clean_data.R` reproduces it in full.
 
 ### Acknowledgments
 I acknowledge the use of Gen-AI to assist with writing the data pull and cleaning scripts, and with debugging performance issues during development.
