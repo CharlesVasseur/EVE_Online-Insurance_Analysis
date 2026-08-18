@@ -23,7 +23,7 @@ All data is sourced from [EVE Ref](docs.everef.net):
 | File | Contents |
 |---|---|
 | `daily_losses_window_[a/b].csv` | Ship losses per day, by ship type (from killmails) |
-| `mineral_prices_window_[a/b].csv` | Jita reference prices for the 8 refined minerals used in blueprint manufacturing |
+| `material_prices_window_[a/b].csv[.gz]` | Jita reference prices for every material type actually required by ship blueprints in that window (minerals and manufactured components) |
 | `sde_blueprints_window_[a/b].csv` | Material inputs per ship blueprint, per SDE snapshot |
 | `sde_types_window_[a/b].csv` | Ship type names and classification, filtered to types that actually appear in loss data |
 | `wars_window_[a/b]_active_by_week.csv` | Weekly count of formally-declared corp wars active (background context — see limitations) |
