@@ -263,38 +263,49 @@ unzip("data/raw/mer/window_b/EVEOnline_MER_Apr2021.zip", files = "sinks_and_fauc
 df21 <- fread(file.path(tmp, "sinks_and_faucets_over_time.csv"))
 unique(grep("insur", df21$entry_name, ignore.case = TRUE, value = TRUE))
 
-mer_files_by_year <- c(
-  "2018" = "data/raw/mer/window_b/EVEOnline_MER_Apr2018.zip",
-  "2019" = "data/raw/mer/window_b/EVEOnline_MER_Apr2019.zip",
-  "2020" = "data/raw/mer/window_b/EVEOnline_MER_Apr2020.zip",
-  "2021" = "data/raw/mer/window_b/EVEOnline_MER_Apr2021.zip",
-  "2022" = "data/raw/mer/window_b/EVEOnline_MER_Apr2022.zip"
+year_file_picks <- c(
+  "2018" = "EVEOnline_MER_Dec2018.zip",
+  "2019" = "EVEOnline_MER_Dec2019b.zip",
+  "2020" = "EVEOnline_MER_Dec2020.zip",
+  "2021" = "EVEOnline_MER_Dec2021_Updated.zip",
+  "2022" = "EVEOnline_MER_Dec2022.zip"
 )
 
+mer_dir <- "data/raw/mer/window_b"  # adjust if your raw MER files live elsewhere
+
 insurance_list <- list()
-for (yr in names(mer_files_by_year)) {
-  f <- mer_files_by_year[yr]
+
+for (yr in rev(names(year_file_picks))) {
+  f <- file.path(mer_dir, year_file_picks[yr])
+  if (!file.exists(f)) {
+    warning(sprintf("Expected file not found for %s: %s", yr, f))
+    next
+  }
   fname <- find_sinks_file(f)
   tmp <- tempdir()
   unzip(f, files = fname, exdir = tmp)
   df <- fread(file.path(tmp, fname))
   
   if ("keyText" %in% names(df)) {
-    sub <- df[grepl("insur", keyText, ignore.case = TRUE), .(date = as.Date(date), value = as.numeric(value))]
+    sub <- df[grepl("insur", keyText, ignore.case = TRUE),
+              .(date = as.Date(date), value = as.numeric(value))]
   } else {
     sub <- df[grepl("insur", entry_name, ignore.case = TRUE),
-              .(date = as.Date(history_date), value = as.numeric(entry_faucet_value))]
+              .(date = as.Date(history_date),
+                value = as.numeric(entry_faucet_value) + as.numeric(entry_sink_value))]
   }
-  message(sprintf("%s: %d insurance rows found", yr, nrow(sub)))
+  sub[, source_year_file := yr]
+  message(sprintf("%s (%s): %d insurance rows found, date range %s to %s",
+                  yr, year_file_picks[yr], nrow(sub), min(sub$date), max(sub$date)))
   insurance_list[[yr]] <- sub
 }
 
 insurance_all <- rbindlist(insurance_list, fill = TRUE)
 setorder(insurance_all, date)
 insurance_final <- unique(insurance_all, by = "date")
-fwrite(insurance_final, "data/processed/mer_insurance_window_b.csv")
+setorder(insurance_final, date)
 
-range(insurance_final$date)
-nrow(insurance_final)
+dir.create("data/processed", recursive = TRUE, showWarnings = FALSE)
+fwrite(insurance_final[, .(date, value)], "data/processed/mer_insurance_window_b.csv")
 
 file.remove(list.files("data/processed", pattern = "\\.done\\.txt$", full.names = TRUE, recursive = TRUE))
