@@ -7,19 +7,41 @@ dir.create("data/aggregated", recursive = TRUE, showWarnings = FALSE)
 
 get_manufacturing_materials <- function(bp) {
   acts <- bp$activities
-  if (is.null(acts)) return(NULL)  # no activities at all -- fine, skip
+  if (is.null(acts)) return(NULL)
   if (!is.null(acts$manufacturing)) return(acts$manufacturing$materials)
   if (!is.null(acts[["1"]])) return(acts[["1"]]$materials)
   return(NULL)
 }
 
+get_manufacturing_product_id <- function(bp) {
+  acts <- bp$activities
+  if (is.null(acts)) return(NA_integer_)
+  products <- if (!is.null(acts$manufacturing)) acts$manufacturing$products
+  else if (!is.null(acts[["1"]])) acts[["1"]]$products
+  else NULL
+  if (is.null(products) || length(products) == 0) return(NA_integer_)
+  
+  first <- products[[1]]
+  if (!is.null(names(products)) && names(products)[1] != "") {
+    as.integer(names(products)[1])
+  } else {
+    as.integer(first$typeID)
+  }
+}
+
 flatten_blueprints <- function(blueprints_list, snapshot_label) {
-  skipped <- 0L
+  skipped_no_materials <- 0L
+  skipped_no_product <- 0L
   rows <- lapply(names(blueprints_list), function(bp_id) {
     bp <- blueprints_list[[bp_id]]
     mats <- get_manufacturing_materials(bp)
     if (is.null(mats) || length(mats) == 0) {
-      skipped <<- skipped + 1L
+      skipped_no_materials <<- skipped_no_materials + 1L
+      return(NULL)
+    }
+    product_id <- get_manufacturing_product_id(bp)
+    if (is.na(product_id)) {
+      skipped_no_product <<- skipped_no_product + 1L
       return(NULL)
     }
     if (!is.null(names(mats)) && all(names(mats) != "")) {
@@ -30,14 +52,16 @@ flatten_blueprints <- function(blueprints_list, snapshot_label) {
       quantities <- sapply(mats, function(m) m$quantity)
     }
     data.table(
-      type_id = as.integer(bp_id),
+      type_id = product_id,                # CHANGED: was as.integer(bp_id)
+      blueprint_id = as.integer(bp_id),     # NEW: keep original blueprint ID for traceability
       material_type_id = as.integer(material_ids),
       quantity = as.numeric(quantities),
       snapshot = snapshot_label
     )
   })
-  message(sprintf("  %s: %d blueprints skipped (no manufacturing materials), %d kept",
-                  snapshot_label, skipped, length(blueprints_list) - skipped))
+  message(sprintf("  %s: %d blueprints kept, %d skipped (no materials), %d skipped (no product)",
+                  snapshot_label, length(blueprints_list) - skipped_no_materials - skipped_no_product,
+                  skipped_no_materials, skipped_no_product))
   rbindlist(rows, fill = TRUE)
 }
 
