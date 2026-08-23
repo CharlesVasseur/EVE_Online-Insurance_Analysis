@@ -32,6 +32,5 @@ rifter_priced_a <- rifter_bp_a %>%
   mutate(price = get_price_asof(material_type_id, trace_date, material_prices_window_a),
          line_value = quantity * price) %>%
   ungroup()
-
 rifter_priced_a
 sum(rifter_priced_a$line_value, na.rm = TRUE)
