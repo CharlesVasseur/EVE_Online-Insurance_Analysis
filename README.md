@@ -29,7 +29,8 @@ All data is sourced from [EVE Ref](docs.everef.net):
 | `wars_window_[a/b]_active_by_week.csv` | Weekly count of formally-declared corp wars active (background context — see limitations) |
 | `wars_window_[a/b]_summary.csv` | Per-war lifetime destruction totals, where determinable within the study window |
 | `mer_insurance_window_b.csv` | CCP's own published insurance faucet data (Window B only — CCP's Monthly Economic Report only exists from 2016 onward) |
-
+| `hull_value_window_.csv[a/b].csv` | Estimated ISK replacement cost of every ship lost per day |
+| `excluded_ship_types_window_[a/b].csv` | Ship types dropped from the analysis along with how many losses each accounts for |
 
 Raw data or cleaned data is not committed to this repository due to size.
 Running `R/download_data.R`, then `R/clean_data.R` reproduces it in full.
