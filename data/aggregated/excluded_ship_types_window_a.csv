@@ -1,0 +1,531 @@
+ship_type_id,total_losses,type_name
+670,5735091,Capsule
+601,566225,Ibis
+606,542387,Velator
+588,358889,Reaper
+596,258916,Impairor
+34562,65080,Svipul
+33328,63655,Capsule - Genolution 'Auroral' 197-variant
+2233,45955,Customs Office
+34317,38420,Confessor
+4318,34119,InterBus Customs Office
+35683,16488,Hecate
+34828,16284,Jackdaw
+34496,2621,Council Diplomatic Shuttle
+34590,1805,Victorieux Luxury Yacht
+2863,1612,Primae
+353769,1557,Logistics mk.0
+2078,1497,Zephyr
+353760,1410,Scout gk.0
+364034,1344,Logistics gk.0
+353767,1291,Sentinel ak.0
+3532,1282,Echelon
+32245,1272,Hyasyoda Research Laboratory
+352591,1223,Frontline - CA
+364743,1210,Frontline - GA
+364027,1074,Scout ck.0
+364741,1058,Medic - GA
+29266,1023,Apotheosis
+353764,1022,Assault ck.0
+364740,1009,Frontline - AM
+37456,998,Maulus Navy Issue
+364745,960,Frontline - MN
+353768,927,Logistics M/1-Series
+364041,873,Sentinel gk.0
+364033,872,Logistics ck.0
+356559,858,Medic - CA
+364021,839,Assault mk.0
+364738,815,Medic - AM
+353763,777,Assault C/1-Series
+353759,748,Scout G/1-Series
+352592,743,Militia Amarr Heavy Frame
+364031,743,Logistics G/1-Series
+364023,714,Assault gk.0
+364744,692,Medic - MN
+364028,691,Scout mk.0
+364019,650,Assault G/1-Series
+37455,649,Griffin Navy Issue
+351278,649,Gunnlogi C-I
+37480,633,Bifrost
+354941,627,Militia Caldari Medium Frame
+364032,620,Logistics A/1-Series
+364022,616,Assault ak.0
+355473,608,Gorgon
+364035,592,Logistics ak.0
+37454,587,Vigil Fleet Issue
+353766,576,Sentinel A/1-Series
+364818,562,Amarr Heavy Frame A-I
+355470,561,Soma
+351824,560,Madrugar G-I
+355374,548,Sica
+37482,527,Stork
+364018,518,Assault M/1-Series
+352588,492,Logistics M-I
+353486,490,Onikuma
+364030,489,Logistics C/1-Series
+353808,485,Baloch
+364024,469,Scout C/1-Series
+352415,461,Sentinel A-I
+355472,451,Viper
+364883,448,Amarr Heavy Frame A/1-Series
+364040,444,Sentinel ck.0
+364026,441,Scout M/1-Series
+354934,438,Sniper - CA
+364884,430,Amarr Heavy Frame ak.0
+37483,421,Magus
+366715,417,Commando mk.0
+364956,405,Militia Gallente Medium Frame
+364739,395,Sniper - AM
+363983,390,Logistics G-I
+364732,385,Armor AV - GA
+364020,376,Assault A/1-Series
+354935,373,Armor AV - CA
+364746,370,Sniper - MN
+353884,360,Python
+364742,351,Sniper - GA
+364955,346,Militia Amarr Medium Frame
+351071,341,Assault C-I
+37453,331,Crucifier Navy Issue
+356842,327,Blood Raiders Saga
+352593,322,Militia Minmatar Medium Frame
+364726,318,Armor AV - AM
+363935,301,Assault G-I
+352587,299,Scout G-I
+355430,295,'Dragonfly' Scout [nSv]
+364736,293,Armor AV - MN
+37481,289,Pontifex
+366695,278,Militia Caldari Heavy Frame
+364038,258,Sentinel G/1-Series
+364039,253,Sentinel mk.0
+366714,253,Commando M/1-Series
+363936,249,Assault M-I
+367856,248,Republic 'Shaman' Logistics
+356037,241,'Sever' Logistics M-I
+366368,240,Federation Logistics gk.0
+363984,234,Logistics A-I
+364952,232,Militia Minmatar Light Frame
+366696,229,Militia Gallente Heavy Frame
+356841,223,Ishukone Watch Saga
+363934,223,Assault A-I
+352596,216,Militia Gallente Light Frame
+364029,215,Scout ak.0
+366697,215,Militia Minmatar Heavy Frame
+363982,211,Logistics C-I
+356401,209,Commando A-I
+356828,208,'Dren' Sentinel A-I
+363957,204,Scout M-I
+364037,198,Sentinel C/1-Series
+356627,197,'Neo' Logistics mk.0
+364178,196,'Black Eagle' Scout G/1-Series
+366448,196,Republic Logistics mk.0
+364879,195,Caldari Medium Frame C/1-Series
+353886,194,Incubus
+364815,191,Caldari Medium Frame C-I
+363397,185,'Dragonfly' Assault [nSv]
+366711,176,Commando ck.0
+356840,175,'Covenant' Assault C-I
+366365,173,Federation Assault gk.0
+366371,169,Federation Scout gk.0
+365311,162,'Neo' Logistics gk.0
+34328,160,Bowhead
+364877,159,Gallente Medium Frame G/1-Series
+365262,155,Commando A/1-Series
+356624,153,'Neo' Sentinel ak.0
+364010,149,Sentinel G-I
+364025,147,Scout A/1-Series
+366445,146,Republic Assault mk.0
+366423,145,Imperial Sentinel ak.0
+368023,145,Republic 'Nomad' Assault
+37135,144,Endurance
+365314,144,'Neo' Logistics ck.0
+364036,142,Sentinel M/1-Series
+356829,141,'Dren' Logistics M-I
+366493,141,State Assault ck.0
+366712,140,Commando G/1-Series
+364875,137,Minmatar Medium Frame M/1-Series
+367999,137,Federation 'Spartan' Assault
+364816,134,Gallente Medium Frame G-I
+356031,126,'Raven' Assault C-I
+356621,124,'Neo' Scout gk.0
+364881,122,Amarr Medium Frame A/1-Series
+364814,121,Amarr Medium Frame A-I
+367863,120,Federation 'Serpent' Scout
+37457,117,Deacon
+355772,116,Guristas Saga
+363955,115,Scout C-I
+366710,114,Commando C/1-Series
+364817,112,Minmatar Medium Frame M-I
+367998,111,Republic 'Warlord' Sentinel
+367854,110,Imperial 'Opus' Assault
+367955,110,State 'Rasetsu' Assault
+367960,106,Republic 'Tiger' Scout
+364812,102,Gallente Light Frame G-I
+366451,100,Republic Scout mk.0
+366700,99,Commando M-I
+364820,98,Gallente Heavy Frame G-I
+356830,97,'Dren' Scout G-I
+366713,97,Commando gk.0
+368882,97,Madrugar Gv.0
+356827,95,'Dren' Assault C-I
+37458,94,Kirin
+351355,93,Grimsnes
+364009,93,Sentinel C-I
+364567,92,'Templar' Sentinel A-I
+366698,90,Commando C-I
+351354,89,Myron
+367864,89,Federation 'Centurion' Commando
+367697,88,APEX 'Shaman' Logistics
+33099,86,Nefantar Thrasher
+364819,85,Caldari Heavy Frame C-I
+364813,84,Minmatar Light Frame M-I
+366699,84,Commando G-I
+368022,84,Imperial 'Dominus' Sentinel
+37460,83,Scalpel
+363956,83,Scout A-I
+366688,81,Minmatar Heavy Frame M/1-Series
+364565,80,'Templar' Assault A-I
+365930,80,'Hellmar' Sentinel ak.0
+366414,79,Imperial Assault ak.0
+368024,77,Federation 'Chiron' Logistics
+356618,76,'Neo' Assault ck.0
+364873,76,Gallente Light Frame G/1-Series
+366724,74,'Neo' Commando mk.0
+364099,70,'Mauler' Sentinel A-I
+366685,70,'Neo' Sentinel ck.0
+366682,67,'Neo' Sentinel gk.0
+366686,67,Gallente Heavy Frame G/1-Series
+364880,65,Caldari Medium Frame ck.0
+37459,64,Thalia
+27675,63,System Scanning Array
+364011,63,Sentinel M-I
+366737,63,Militia Amarr Light Frame
+366736,62,Militia Caldari Light Frame
+364566,60,'Templar' Logistics A-I
+364878,60,Gallente Medium Frame gk.0
+366690,60,Caldari Heavy Frame C/1-Series
+367963,59,Republic 'Renegade' Commando
+617,58,Echo
+351253,58,Methana
+364821,58,Minmatar Heavy Frame M-I
+367600,58,APEX 'Dominus' Sentinel
+364863,57,Minmatar Light Frame M/1-Series
+365320,57,'Neo' Assault gk.0
+366366,57,Federation Logistics G-I
+366420,57,Imperial Logistics ak.0
+34339,56,Moros Interbus Edition
+365263,56,Commando ak.0
+366383,54,Federation Madrugar
+366421,54,Imperial Sentinel A-I
+368547,54,'Quafe' Methana Blueprint
+364811,52,Caldari Light Frame C-I
+365326,52,'Neo' Scout mk.0
+366494,52,State Logistics ck.0
+351252,51,Saga
+366369,51,Federation Scout G-I
+368881,50,Madrugar G/1
+34341,49,Naglfar Justice Edition
+365308,49,'Neo' Logistics ak.0
+366446,49,Republic Logistics M-I
+367687,49,APEX 'Spartan' Assault
+615,48,Immolator
+356073,47,'HC-130' Gunnlogi
+356110,46,'Sever' Sentinel A-I
+364882,45,Amarr Medium Frame ak.0
+365976,45,'Neo' Scout ck.0
+365932,44,'Remnant IX' Logistics mk.0
+366363,44,Federation Assault G-I
+367959,44,Imperial 'Seraph' Logistics
+364876,43,Minmatar Medium Frame mk.0
+365317,43,'Neo' Assault ak.0
+365323,43,'Neo' Assault mk.0
+368647,43,Republic Commando mk.0
+356023,42,'Eon' Militia Amarr Heavy Frame
+356114,41,'Sever' Scout G-I
+355771,40,'Skinweave' Militia Amarr Heavy Frame
+366339,40,'Republic Command' Assault mk.0
+367691,39,APEX 'Opus' Assault
+367703,38,APEX 'Serpent' Scout
+34345,37,Revelation Sarum Edition
+355768,36,'Skinweave' Militia Minmatar Medium Frame
+366447,36,Republic Logistics M/1-Series
+33081,35,Taipan
+356040,35,'Valor' Scout G-I
+356072,35,'AI-102' Madrugar
+364097,35,'Hunter' Scout G-I
+364810,34,Amarr Light Frame A-I
+367456,34,'Jotunn' Sentinel M-I+
+368026,34,State 'Samurai' Commando
+366449,33,Republic Scout M-I
+364172,32,CreoDron Breach HAV
+365299,32,'Neo' Commando ak.0
+366343,31,'Federal Marine' Assault gk.0
+366367,31,Federation Logistics G/1-Series
+366415,31,Imperial Commando A-I
+366718,31,'Neo' Commando ck.0
+367689,31,APEX 'Nomad' Assault
+367988,31,APEX 'Nomad' Assault vX.1
+364874,30,Gallente Light Frame gk.0
+356623,29,'Neo' Sentinel A/1-Series
+366370,29,Federation Scout G/1-Series
+366443,29,Republic Assault M-I
+366337,28,'State Peacekeeper' Assault ck.0
+366444,28,Republic Assault M/1-Series
+366716,28,'Neo' Commando C-I
+366719,28,'Neo' Commando G-I
+33079,27,Hematos
+356022,27,'Fossil' Militia Minmatar Medium Frame
+356626,27,'Neo' Logistics M/1-Series
+364171,27,Kaalakiota Tactical HAV
+367655,27,'Quafe' Assault M-I
+364098,26,Shock Assault
+365936,26,'Rattati' Assault G/1-Series
+366734,26,Caldari Light Frame C/1-Series
+365318,25,'Neo' Assault G-I
+366364,25,Federation Assault G/1-Series
+366508,25,State Gunnlogi
+367443,25,'Ukko' Assault C-I+
+367705,25,APEX 'Tiger' Scout
+368069,25,'Kullervo' Basic-M C-I
+368617,25,State Commando ck.0
+356075,24,'LC-217' Saga
+366489,24,State Assault C-I
+366722,24,'Neo' Commando M-I
+367455,24,'Izanami' Sentinel C-I+
+366721,23,'Neo' Commando gk.0
+366732,23,Amarr Light Frame A/1-Series
+367453,23,'Behemoth' Sentinel A-I+
+367653,23,'Quafe' Assault G-I
+367681,23,APEX 'Warlord' Sentinel
+368000,23,State 'Kampo' Logistics
+365297,22,'Neo' Commando A-I
+367711,22,APEX 'Centurion' Commando
+367760,22,Rattati's Modified Assault gk.0
+367885,22,Storm Raider's Modified Commando ak.0
+368003,22,Imperial 'Paladin' Commando
+368911,22,Recon - CA
+366412,21,Imperial Assault A-I
+366490,21,State Logistics C-I
+366687,21,Gallente Heavy Frame gk.0
+368888,21,Gunnlogi C/1
+365942,20,'Tigris' Sentinel A-I
+366418,20,Imperial Logistics A-I
+367457,20,'Enkidu' Sentinel G-I+
+368066,20,'Grettir' Basic-M M-I
+368546,20,'Quafe' Saga Blueprint
+365928,19,'Flying Scotsman' Assault ck.0
+366341,19,'Imperial Guard' Assault ak.0
+367742,19,Scotsman's Modified Scout gk.0
+368651,19,Republic Sentinel mk.0
+33083,18,Violator
+365321,18,'Neo' Assault M-I
+367450,18,'Magni' Assault M-I+
+367654,18,'Quafe' Assault A-I
+368001,18,Imperial 'Dragon' Scout
+368061,18,'Hastati' Basic-M A-I
+368909,18,Recon - AM
+34343,17,Phoenix Wiyrkomi Edition
+34443,17,Tristan Quafe Edition
+355720,17,'Skinweave' Militia Caldari Medium Frame
+364247,17,Kaalakiota Recon Dropship
+366422,17,Imperial Sentinel A/1-Series
+367442,17,'Sarak' Assault A-I+
+367738,17,Frame's Modified Assault ck.0
+368064,17,'Toxotai' Basic-M G-I
+368908,17,Shield AV - AM
+368913,17,Recon - GA
+368915,17,Recon - MN
+17701,16,Tracking Array
+356107,16,'Sever' Assault C-I
+365319,16,'Neo' Assault G/1-Series
+366413,16,Imperial Assault A/1-Series
+367451,16,'Memnon' Assault G-I+
+367685,16,APEX 'Rasetsu' Assault
+367695,16,APEX 'Chiron' Logistics
+367699,16,APEX 'Seraph' Logistics
+355767,15,'Skinweave' Militia Gallente Light Frame
+364317,15,Staff Recruiter Militia Frame
+365934,15,'Wolfman' Assault A/1-Series
+366338,15,'Republic Command' Assault M/1-Series
+366346,15,'Stahl' Assault C-I
+366419,15,Imperial Logistics A/1-Series
+366689,15,Minmatar Heavy Frame mk.0
+367652,15,'Quafe' Sentinel M-I
+367716,15,Archduke's Modified Sentinel mk.0
+365704,14,'Pyrus' Assault C/1-Series
+366450,14,Republic Scout M/1-Series
+366491,14,State Assault C/1-Series
+367634,14,'Quafe' Sentinel G-I
+367751,14,Logibro's Modified Logistics mk.0
+368067,14,'Kari' Basic-M M/I
+368582,14,'Kaalakiota' Assault C-I
+368910,14,Shield AV - CA
+356058,13,'Quafe' Assault ck.0
+356065,13,'Quafe' Scout gk.0
+365313,13,'Neo' Logistics C/1-Series
+365428,13,Saga-II
+365701,13,'Pyrus' Assault A/1-Series
+367658,13,'Quafe' Scout M-I
+356069,12,'CD-41' Myron
+356625,12,'Neo' Sentinel A-I
+368025,12,State 'Hawk' Scout
+368614,12,State Scout ck.0
+368912,12,Shield AV - GA
+369419,12,Standard Logistics M-I
+3628,11,Nation
+364243,11,State Protectorate Assault C-I
+365309,11,'Neo' Logistics G-I
+365940,11,'Foxfour' Assault G-I
+366336,11,'State Peacekeeper' Assault C/1-Series
+366342,11,'Federal Marine' Assault G/1-Series
+366679,11,'Neo' Sentinel mk.0
+367811,11,State 'Shogun' Sentinel
+367948,11,Federation 'Atlas' Sentinel
+355424,10,Baloch - Impact
+356068,10,'AG-01' Grimsnes
+356628,10,'Neo' Logistics M-I
+364242,10,Federal Defense Union Scout G-I
+365310,10,'Neo' Logistics G/1-Series
+365973,10,'Neo' Scout ak.0
+367989,10,APEX 'Dragon' Scout vX.1
+368062,10,'Principe' Basic-M A/I
+368581,10,'Brutor' Commando M-I
+368636,10,Federation Sentinel gk.0
+368884,10,Marduk G/1
+368889,10,Gunnlogi Cv.0
+369416,10,Standard Logistics A-I
+369422,10,Standard Scout G-I
+365943,9,'Praetorian VII' Madrugar
+365974,9,'Neo' Scout C-I
+366417,9,Imperial Commando ak.0
+368065,9,'Phalanx' Basic-M G/I
+368071,9,'Tarapitha' Basic-M C/I
+368633,9,Federation Commando gk.0
+368887,9,Gladius C-I
+369414,9,Standard Commando G-I
+34445,8,Vexor Quafe Edition
+365298,8,'Neo' Commando A/1-Series
+365723,8,'Pyrus' Logistics mk.0
+365938,8,'Logicloop' Scout M-I
+366677,8,'Neo' Sentinel M-I
+366683,8,'Neo' Sentinel C-I
+366691,8,Caldari Heavy Frame ck.0
+367677,8,APEX 'Shogun' Sentinel
+367713,8,APEX 'Renegade' Commando
+368880,8,Marduk G-I
+369424,8,Standard Sentinel A-I
+34118,7,Megathron Quafe Edition
+356053,7,'Quafe' Assault C-I
+356109,7,'Raven' Sentinel A-I
+363354,7,Angel Cartel Saga
+364872,7,Minmatar Light Frame mk.0
+365315,7,'Neo' Assault A-I
+365721,7,'Pyrus' Logistics M-I
+368579,7,Imperial Scout ak.0
+368580,7,'Tash Murkon' Sentinel A-I
+369409,7,Standard Assault C-I
+356111,6,'Valor' Logistics M-I
+356112,6,'Raven' Logistics M-I
+364105,6,Recruit Militia Frame
+365708,6,'Pyrus' Assault gk.0
+366492,6,State Logistics C/1-Series
+366678,6,'Neo' Sentinel M/1-Series
+366733,6,Amarr Light Frame ak.0
+367693,6,APEX 'Kampo' Logistics
+367701,6,APEX 'Hawk' Scout
+367987,6,APEX 'Atlas' Sentinel vX.1
+368585,6,'Roden' Commando G-I
+34151,5,Rattlesnake Victory Edition
+356617,5,'Neo' Assault C/1-Series
+365945,5,'Greyscale' Saga
+365971,5,'Neo' Scout A-I
+366680,5,'Neo' Sentinel G-I
+367651,5,'Quafe' Sentinel A-I
+367656,5,'Quafe' Scout C-I
+367679,5,APEX 'Atlas' Sentinel
+367707,5,APEX 'Dragon' Scout
+367709,5,APEX 'Samurai' Commando
+367715,5,APEX 'Paladin' Commando
+368518,5,CreoDron Methana vX.1
+368532,5,'Quafe' Madrugar
+368577,5,'Tash Murkon' Logistics A-I
+368620,5,State Sentinel ck.0
+368885,5,Marduk Gv.0
+368891,5,Gladius Cv.0
+368914,5,Shield AV - MN
+369415,5,Standard Commando M-I
+356619,4,'Neo' Assault C-I
+356620,4,'Neo' Scout G/1-Series
+356622,4,'Neo' Scout G-I
+364246,4,CreoDron Transport Dropship
+365324,4,'Neo' Scout M-I
+365325,4,'Neo' Scout M/1-Series
+365944,4,'Nullarbor' Myron
+366382,4,Federation Grimsnes
+366384,4,Federation Methana
+366416,4,Imperial Commando A/1-Series
+366735,4,Caldari Light Frame ck.0
+367657,4,'Quafe' Scout A-I
+368531,4,'Quafe' Gunnlogi
+368638,4,Republic Commando M-I
+368890,4,Gladius C/1
+1916,3,Concord SWAT Battleship
+356015,3,'Primordial' Militia Caldari Medium Frame
+356059,3,'Quafe' Scout G-I
+365307,3,'Neo' Logistics A/1-Series
+365316,3,'Neo' Assault A/1-Series
+366509,3,State Saga
+368584,3,'Roden' Scout G-I
+368586,3,State Scout C-I
+368640,3,Republic Commando M/1-Series
+368650,3,Republic Sentinel M/1-Series
+369421,3,Standard Scout C-I
+34441,2,Dominix Quafe Edition
+355423,2,Onikuma - Impact
+356077,2,'LG-88' Methana
+363349,2,Balac's Modified Assault ck.0
+364096,2,'CQC' Scout G-I
+364322,2,Master Recruiter Assault C-II
+365306,2,'Neo' Logistics A-I
+365312,2,'Neo' Logistics C-I
+365322,2,'Neo' Assault M/1-Series
+365993,2,'Origin' Assault C-I
+366723,2,'Neo' Commando M/1-Series
+368524,2,Imperial Scout A-I
+368534,2,'Quafe' Myron
+368549,2,'Quafe' Logistics C-I
+368551,2,'Quafe' Logistics M-I
+368555,2,'Quafe' Commando M-I
+368583,2,'Kaalakiota' Scout C-I
+368615,2,State Commando C-I
+368616,2,State Commando C/1-Series
+368631,2,Federation Commando G-I
+369413,2,Standard Commando C-I
+369427,2,Standard Sentinel M-I
+11019,1,Cockroach
+16217,1,Small Auxiliary Power Array
+35781,1,Fiend
+356024,1,'Venom' Militia Amarr Heavy Frame
+356106,1,'Valor' Assault C-I
+356113,1,'Raven' Scout G-I
+364095,1,'Raider' Scout G-I
+364121,1,CreoDron Methana
+364319,1,Senior Recruiter Assault C-I
+365420,1,'LC-225' Saga-II
+365975,1,'Neo' Scout C/1-Series
+365994,1,'Origin' Logistics M-I
+366340,1,'Imperial Guard' Assault A/1-Series
+366507,1,State Myron
+366720,1,'Neo' Commando G/1-Series
+367650,1,'Quafe' Sentinel C-I
+368533,1,'Quafe' Grimsnes
+368539,1,'Quafe' Methana
+368552,1,'Quafe' Commando A-I
+368554,1,'Quafe' Commando G-I
+368574,1,Imperial Scout A/1-Series
+368576,1,'Brutor' Logistics M-I
+368594,1,State Scout C/1-Series
+368619,1,State Sentinel C/1-Series
+369408,1,Standard Assault A-I
+369410,1,Standard Assault G-I
+369411,1,Standard Assault M-I
+369425,1,Standard Sentinel C-I
