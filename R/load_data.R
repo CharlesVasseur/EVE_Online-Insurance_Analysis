@@ -1,5 +1,6 @@
 library(data.table)
 library(dplyr)
+library(lubridate)
 
 daily_losses_window_a <- fread("data/aggregated/daily_losses_window_a.csv")
 daily_losses_window_b <- fread("data/aggregated/daily_losses_window_b.csv")
@@ -14,6 +15,8 @@ wars_window_a_active_by_week <- fread("data/aggregated/wars_window_a_active_by_w
 wars_window_a_summary <- fread("data/aggregated/wars_window_a_summary.csv")
 wars_window_b_active_by_week <- fread("data/aggregated/wars_window_b_active_by_week.csv")
 wars_window_b_summary <- fread("data/aggregated/wars_window_b_summary.csv")
+hull_value_window_a <- fread("data/aggregated/hull_value_window_a.csv")
+hull_value_window_b <- fread("data/aggregated/hull_value_window_b.csv")
 
 daily_losses_window_a$date <- as.Date(daily_losses_window_a$date)
 daily_losses_window_b$date <- as.Date(daily_losses_window_b$date)
@@ -22,5 +25,7 @@ material_prices_window_b$date <- as.Date(material_prices_window_b$date)
 sde_blueprints_window_a$snapshot <- as.Date(sde_blueprints_window_a$snapshot)
 sde_blueprints_window_b$snapshot <- as.Date(sde_blueprints_window_b$snapshot, format="%Y%m%d")
 mer_insurance_window_b$date <- as.Date(mer_insurance_window_b$date)
+hull_value_window_a$date <- as.Date(hull_value_window_a$date)
+hull_value_window_b$date <- as.Date(hull_value_window_b$date)
 
 mineral_ids <- c(34, 35, 36, 37, 38, 39, 40, 11399)
