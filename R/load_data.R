@@ -17,6 +17,8 @@ wars_window_b_active_by_week <- fread("data/aggregated/wars_window_b_active_by_w
 wars_window_b_summary <- fread("data/aggregated/wars_window_b_summary.csv")
 hull_value_window_a <- fread("data/aggregated/hull_value_window_a.csv")
 hull_value_window_b <- fread("data/aggregated/hull_value_window_b.csv")
+loss_ratio_window_a <- fread("data/aggregated/loss_ratio_window_a.csv")
+loss_ratio_window_b <- fread("data/aggregated/loss_ratio_window_b.csv")
 
 daily_losses_window_a$date <- as.Date(daily_losses_window_a$date)
 daily_losses_window_b$date <- as.Date(daily_losses_window_b$date)
@@ -27,5 +29,7 @@ sde_blueprints_window_b$snapshot <- as.Date(sde_blueprints_window_b$snapshot, fo
 mer_insurance_window_b$date <- as.Date(mer_insurance_window_b$date)
 hull_value_window_a$date <- as.Date(hull_value_window_a$date)
 hull_value_window_b$date <- as.Date(hull_value_window_b$date)
+loss_ratio_window_a$week_start <- as.Date(loss_ratio_window_a$week_start)
+loss_ratio_window_b$week_start <- as.Date(loss_ratio_window_b$week_start)
 
 mineral_ids <- c(34, 35, 36, 37, 38, 39, 40, 11399)
