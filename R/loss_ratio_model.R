@@ -1,5 +1,11 @@
 source("R/load_data.R")
 
+hull_value_window_a <- fread("data/aggregated/hull_value_window_a.csv")
+hull_value_window_b <- fread("data/aggregated/hull_value_window_b.csv")
+
+hull_value_window_a$date <- as.Date(hull_value_window_a$date)
+hull_value_window_b$date <- as.Date(hull_value_window_b$date)
+
 ### Weekly Loss Ratio
 
 aggregate_weekly <- function(hull_values) {
