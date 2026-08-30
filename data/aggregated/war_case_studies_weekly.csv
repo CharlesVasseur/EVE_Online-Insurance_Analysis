@@ -1,0 +1,5 @@
+war_name,window,baseline_type,baseline_periods_available,baseline_avg_ratio,war_periods_available,war_avg_ratio,war_peak_ratio,ratio_increase_vs_baseline,pct_periods_above_threshold
+Fountain War,a,pre_war,12,1.02698580990576,22,0.949365288289773,1.3694704857532,0.924419090441857,0
+Bloodbath of B-R5RB,a,pre_war,12,1.10866384076023,0,,-Inf,,
+World War Bee II (Casino War),b,pre_war,12,0.941122317426709,61,1.1235368914159,2.60515515877128,1.19382663720904,0.0163934426229508
+Massacre at M2-XFE,b,war_own_average,61,1.1235368914159,0,,-Inf,,
