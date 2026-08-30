@@ -60,6 +60,15 @@ excluded_summary_b <- hull_value_window_b[ship_type_id %in% exclude_ids_b,
 hull_value_window_a_clean <- hull_value_window_a[!ship_type_id %in% exclude_ids_a]
 hull_value_window_b_clean <- hull_value_window_b[!ship_type_id %in% exclude_ids_b]
 
+### Completeness diagnostic
+
+completeness_by_ship <- rbind(
+  hull_value_window_a_clean[, .(window = "a", mean_pct_priced = mean(pct_value_priced),
+                                pct_rows_fully_priced = mean(pct_value_priced == 1)), by = ship_type_id],
+  hull_value_window_b_clean[, .(window = "b", mean_pct_priced = mean(pct_value_priced),
+                                pct_rows_fully_priced = mean(pct_value_priced == 1)), by = ship_type_id]
+)
+
 ### Outputs
 
 dir.create("data/model_output", recursive = TRUE, showWarnings = FALSE)
@@ -67,3 +76,4 @@ fwrite(hull_value_window_a_clean, "data/model_output/hull_value_window_a.csv")
 fwrite(hull_value_window_b_clean, "data/model_output/hull_value_window_b.csv")
 fwrite(excluded_summary_a, "data/model_output/excluded_ship_types_window_a.csv")
 fwrite(excluded_summary_b, "data/model_output/excluded_ship_types_window_b.csv")
+fwrite(completeness_by_ship, "data/model_output/hull_value_completeness_by_ship.csv")
