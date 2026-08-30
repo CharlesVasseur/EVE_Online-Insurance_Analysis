@@ -62,8 +62,8 @@ hull_value_window_b_clean <- hull_value_window_b[!ship_type_id %in% exclude_ids_
 
 ### Outputs
 
-dir.create("data/aggregated", recursive = TRUE, showWarnings = FALSE)
-fwrite(hull_value_window_a_clean, "data/aggregated/hull_value_window_a.csv")
-fwrite(hull_value_window_b_clean, "data/aggregated/hull_value_window_b.csv")
-fwrite(excluded_summary_a, "data/aggregated/excluded_ship_types_window_a.csv")
-fwrite(excluded_summary_b, "data/aggregated/excluded_ship_types_window_b.csv")
+dir.create("data/model_output", recursive = TRUE, showWarnings = FALSE)
+fwrite(hull_value_window_a_clean, "data/model_output/hull_value_window_a.csv")
+fwrite(hull_value_window_b_clean, "data/model_output/hull_value_window_b.csv")
+fwrite(excluded_summary_a, "data/model_output/excluded_ship_types_window_a.csv")
+fwrite(excluded_summary_b, "data/model_output/excluded_ship_types_window_b.csv")

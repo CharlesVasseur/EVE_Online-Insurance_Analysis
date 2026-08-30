@@ -1,14 +1,14 @@
 source("R/load_data.R")
 
-loss_ratio_window_a <- fread("data/aggregated/loss_ratio_window_a.csv")
-loss_ratio_window_b <- fread("data/aggregated/loss_ratio_window_b.csv")
-loss_ratio_daily_a <- fread("data/aggregated/loss_ratio_daily_window_a.csv")
-loss_ratio_daily_b <- fread("data/aggregated/loss_ratio_daily_window_b.csv")
+loss_ratio__weekly_window_a <- fread("data/model_output/loss_ratio_weekly_window_a.csv")
+loss_ratio__weekly_window_b <- fread("data/model_output/loss_ratio_weekly_window_b.csv")
+loss_ratio_daily_window_a <- fread("data/model_output/loss_ratio_daily_window_a.csv")
+loss_ratio_daily_window_b <- fread("data/model_output/loss_ratio_daily_window_b.csv")
 
-loss_ratio_window_a$week_start <- as.Date(loss_ratio_window_a$week_start)
-loss_ratio_window_b$week_start <- as.Date(loss_ratio_window_b$week_start)
-loss_ratio_daily_a$date <- as.Date(loss_ratio_daily_a$date)
-loss_ratio_daily_b$date <- as.Date(loss_ratio_daily_b$date)
+loss_ratio_weekly_window_a$week_start <- as.Date(loss_ratio_weekly_window_a$week_start)
+loss_ratio_weekly_window_b$week_start <- as.Date(loss_ratio_weekly_window_b$week_start)
+loss_ratio_daily_window_a$date <- as.Date(loss_ratio_daily_window_a$date)
+loss_ratio_daily_window_b$date <- as.Date(loss_ratio_daily_window_b$date)
 
 ### War dates
 
@@ -30,8 +30,8 @@ is_calm <- function(dates, war_dates_subset) {
   }))
 }
 
-calm_daily_a <- loss_ratio_daily_a[is_calm(date, war_dates[window == "a"])]
-calm_daily_b <- loss_ratio_daily_b[is_calm(date, war_dates[window == "b"])]
+calm_daily_a <- loss_ratio_daily_window_a[is_calm(date, war_dates[window == "a"])]
+calm_daily_b <- loss_ratio_daily_window_b[is_calm(date, war_dates[window == "b"])]
 
 threshold_a <- calm_daily_a[, mean(loss_ratio, na.rm = TRUE) + 2 * sd(loss_ratio, na.rm = TRUE)]
 threshold_b <- calm_daily_b[, mean(loss_ratio, na.rm = TRUE) + 2 * sd(loss_ratio, na.rm = TRUE)]
@@ -80,10 +80,10 @@ compute_war_stats <- function(war_dates, ratio_a, ratio_b, date_col, thresholds)
   }))
 }
 
-war_stats_weekly <- compute_war_stats(war_dates, loss_ratio_window_a, loss_ratio_window_b,
+war_stats_weekly <- compute_war_stats(war_dates, loss_ratio_weekly_window_a, loss_ratio_weekly_window_b,
                                       date_col = "week_start", thresholds = thresholds)
 war_stats_weekly
-fwrite(war_stats_weekly, "data/aggregated/war_case_studies_weekly.csv")
+fwrite(war_stats_weekly, "data/model_output/war_case_studies_weekly.csv")
 
 ### Daily analysis
 
@@ -91,7 +91,7 @@ baseline_days <- 84
 war_dates[, baseline_start := start_date - days(baseline_days)]
 war_dates[, baseline_end   := start_date - 1]
 
-war_stats_daily <- compute_war_stats(war_dates, loss_ratio_daily_a, loss_ratio_daily_b,
+war_stats_daily <- compute_war_stats(war_dates, loss_ratio_daily_window_a, loss_ratio_daily_window_b,
                                      date_col = "date", thresholds = thresholds)
 war_stats_daily
-fwrite(war_stats_daily, "data/aggregated/war_case_studies_daily.csv")
+fwrite(war_stats_daily, "data/model_output/war_case_studies_daily.csv")
