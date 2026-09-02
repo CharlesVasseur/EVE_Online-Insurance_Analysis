@@ -1,0 +1,584 @@
+type_id,type_name,group_id,group_name
+582,Bantam,25,Frigate
+583,Condor,25,Frigate
+584,Griffin,25,Frigate
+585,Slasher,25,Frigate
+586,Probe,25,Frigate
+587,Rifter,25,Frigate
+588,Reaper,237,Corvette
+589,Executioner,25,Frigate
+590,Inquisitor,25,Frigate
+591,Tormentor,25,Frigate
+592,Navitas,25,Frigate
+593,Tristan,25,Frigate
+594,Incursus,25,Frigate
+596,Impairor,237,Corvette
+597,Punisher,25,Frigate
+598,Breacher,25,Frigate
+599,Burst,25,Frigate
+601,Ibis,237,Corvette
+602,Kestrel,25,Frigate
+603,Merlin,25,Frigate
+605,Heron,25,Frigate
+606,Velator,237,Corvette
+607,Imicus,25,Frigate
+608,Atron,25,Frigate
+609,Maulus,25,Frigate
+615,Immolator,237,Corvette
+617,Echo,237,Corvette
+620,Osprey,26,Cruiser
+621,Caracal,26,Cruiser
+622,Stabber,26,Cruiser
+623,Moa,26,Cruiser
+624,Maller,26,Cruiser
+625,Augoror,26,Cruiser
+626,Vexor,26,Cruiser
+627,Thorax,26,Cruiser
+628,Arbitrator,26,Cruiser
+629,Rupture,26,Cruiser
+630,Bellicose,26,Cruiser
+631,Scythe,26,Cruiser
+632,Blackbird,26,Cruiser
+633,Celestis,26,Cruiser
+634,Exequror,26,Cruiser
+638,Raven,27,Battleship
+639,Tempest,27,Battleship
+640,Scorpion,27,Battleship
+641,Megathron,27,Battleship
+642,Apocalypse,27,Battleship
+643,Armageddon,27,Battleship
+644,Typhoon,27,Battleship
+645,Dominix,27,Battleship
+648,Badger,28,Hauler
+649,Tayra,28,Hauler
+650,Nereus,28,Hauler
+651,Hoarder,28,Hauler
+652,Mammoth,28,Hauler
+653,Wreathe,28,Hauler
+654,Kryos,28,Hauler
+655,Epithal,28,Hauler
+656,Miasmos,28,Hauler
+657,Iteron Mark V,28,Hauler
+670,Capsule,29,Capsule
+671,Erebus,30,Titan
+672,Caldari Shuttle,31,Shuttle
+1916,Concord SWAT Battleship,27,Battleship
+1944,Bestower,28,Hauler
+2006,Omen,26,Cruiser
+2078,Zephyr,1022,Prototype Exploration Ship
+2161,Crucifier,25,Frigate
+2233,Customs Office,1025,Orbital Infrastructure
+2834,Utu,324,Assault Frigate
+2836,Adrestia,358,Heavy Assault Cruiser
+2863,Primae,28,Hauler
+2948,Shadow,1653,Heavy Fighter
+2998,Noctis,28,Hauler
+3514,Revenant,659,Supercarrier
+3516,Malice,324,Assault Frigate
+3518,Vangel,358,Heavy Assault Cruiser
+3532,Echelon,25,Frigate
+3628,Nation,659,Supercarrier
+3756,Gnosis,419,Combat Battlecruiser
+3764,Leviathan,30,Titan
+3766,Vigil,25,Frigate
+3962,Customs Office Gantry,1106,Orbital Construction Platform
+4005,Scorpion Ishukone Watch,27,Battleship
+4302,Oracle,1201,Attack Battlecruiser
+4306,Naga,1201,Attack Battlecruiser
+4308,Talos,1201,Attack Battlecruiser
+4310,Tornado,1201,Attack Battlecruiser
+4318,InterBus Customs Office,1025,Orbital Infrastructure
+4363,Miasmos Quafe Ultra Edition,28,Hauler
+4388,Miasmos Quafe Ultramarine Edition,28,Hauler
+9854,Polaris Inspector Frigate,237,Corvette
+11019,Cockroach,25,Frigate
+11129,Gallente Shuttle,31,Shuttle
+11132,Minmatar Shuttle,31,Shuttle
+11134,Amarr Shuttle,31,Shuttle
+11172,Helios,830,Covert Ops
+11174,Keres,893,Electronic Attack Ship
+11176,Crow,831,Interceptor
+11178,Raptor,831,Interceptor
+11182,Cheetah,830,Covert Ops
+11184,Crusader,831,Interceptor
+11186,Malediction,831,Interceptor
+11188,Anathema,830,Covert Ops
+11190,Sentinel,893,Electronic Attack Ship
+11192,Buzzard,830,Covert Ops
+11194,Kitsune,893,Electronic Attack Ship
+11196,Claw,831,Interceptor
+11198,Stiletto,831,Interceptor
+11200,Taranis,831,Interceptor
+11202,Ares,831,Interceptor
+11365,Vengeance,324,Assault Frigate
+11371,Wolf,324,Assault Frigate
+11377,Nemesis,834,Stealth Bomber
+11379,Hawk,324,Assault Frigate
+11381,Harpy,324,Assault Frigate
+11387,Hyena,893,Electronic Attack Ship
+11393,Retribution,324,Assault Frigate
+11400,Jaguar,324,Assault Frigate
+11567,Avatar,30,Titan
+11940,Gold Magnate,25,Frigate
+11942,Silver Magnate,25,Frigate
+11957,Falcon,833,Force Recon Ship
+11959,Rook,906,Combat Recon Ship
+11961,Huginn,906,Combat Recon Ship
+11963,Rapier,833,Force Recon Ship
+11965,Pilgrim,833,Force Recon Ship
+11969,Arazu,833,Force Recon Ship
+11971,Lachesis,906,Combat Recon Ship
+11978,Scimitar,832,Logistics
+11985,Basilisk,832,Logistics
+11987,Guardian,832,Logistics
+11989,Oneiros,832,Logistics
+11993,Cerberus,358,Heavy Assault Cruiser
+11995,Onyx,894,Heavy Interdiction Cruiser
+11999,Vagabond,358,Heavy Assault Cruiser
+12003,Zealot,358,Heavy Assault Cruiser
+12005,Ishtar,358,Heavy Assault Cruiser
+12011,Eagle,358,Heavy Assault Cruiser
+12013,Broadsword,894,Heavy Interdiction Cruiser
+12015,Muninn,358,Heavy Assault Cruiser
+12017,Devoter,894,Heavy Interdiction Cruiser
+12019,Sacrilege,358,Heavy Assault Cruiser
+12021,Phobos,894,Heavy Interdiction Cruiser
+12023,Deimos,358,Heavy Assault Cruiser
+12032,Manticore,834,Stealth Bomber
+12034,Hound,834,Stealth Bomber
+12038,Purifier,834,Stealth Bomber
+12042,Ishkur,324,Assault Frigate
+12044,Enyo,324,Assault Frigate
+12198,Mobile Small Warp Disruptor I,361,Mobile Warp Disruptor
+12199,Mobile Medium Warp Disruptor I,361,Mobile Warp Disruptor
+12200,Mobile Large Warp Disruptor I,361,Mobile Warp Disruptor
+12235,Amarr Control Tower,365,Control Tower
+12236,Gallente Control Tower,365,Control Tower
+12237,Ship Maintenance Array,363,Ship Maintenance Array
+12238,Reprocessing Array,311,Reprocessing Array
+12239,Compression Array,1282,Compression Array
+12729,Crane,1202,Blockade Runner
+12731,Bustard,380,Deep Space Transport
+12733,Prorator,1202,Blockade Runner
+12735,Prowler,1202,Blockade Runner
+12743,Viator,1202,Blockade Runner
+12745,Occator,380,Deep Space Transport
+12747,Mastodon,380,Deep Space Transport
+12753,Impel,380,Deep Space Transport
+13780,Equipment Assembly Array,397,Assembly Array
+14343,Silo,404,Silo
+16213,Caldari Control Tower,365,Control Tower
+16214,Minmatar Control Tower,365,Control Tower
+16216,Research Laboratory,413,Laboratory
+16217,Small Auxiliary Power Array,414,Mobile Power Core
+16220,Rapid Equipment Assembly Array,397,Assembly Array
+16221,Moon Harvesting Array,416,Moon Mining
+16227,Ferox,419,Combat Battlecruiser
+16229,Brutix,419,Combat Battlecruiser
+16231,Cyclone,419,Combat Battlecruiser
+16233,Prophecy,419,Combat Battlecruiser
+16236,Coercer,420,Destroyer
+16238,Cormorant,420,Destroyer
+16240,Catalyst,420,Destroyer
+16242,Thrasher,420,Destroyer
+16631,Small Artillery Battery,426,Mobile Projectile Sentry
+16688,Medium Artillery Battery,426,Mobile Projectile Sentry
+16689,Large Artillery Battery,426,Mobile Projectile Sentry
+16690,Small Railgun Battery,449,Mobile Hybrid Sentry
+16691,Medium Railgun Battery,449,Mobile Hybrid Sentry
+16692,Large Railgun Battery,449,Mobile Hybrid Sentry
+16694,Large Beam Laser Battery,430,Mobile Laser Sentry
+16696,Cruise Missile Battery,417,Mobile Missile Sentry
+16697,Torpedo Battery,417,Mobile Missile Sentry
+16869,Complex Reactor Array,438,Mobile Reactor
+17167,Small Beam Laser Battery,430,Mobile Laser Sentry
+17168,Medium Beam Laser Battery,430,Mobile Laser Sentry
+17174,Ion Field Projection Battery,439,Electronic Warfare Battery
+17175,Phase Inversion Battery,439,Electronic Warfare Battery
+17176,Spatial Destabilization Battery,439,Electronic Warfare Battery
+17177,White Noise Generation Battery,439,Electronic Warfare Battery
+17178,Stasis Webification Battery,441,Stasis Webification Battery
+17180,Sensor Dampening Battery,440,Sensor Dampening Battery
+17181,Warp Disruption Battery,443,Warp Scrambling Battery
+17182,Warp Scrambling Battery,443,Warp Scrambling Battery
+17184,Ballistic Deflection Array,444,Shield Hardening Array
+17185,Explosion Dampening Array,444,Shield Hardening Array
+17186,Heat Dissipation Array,444,Shield Hardening Array
+17187,Photon Scattering Array,444,Shield Hardening Array
+17402,Large Blaster Battery,449,Mobile Hybrid Sentry
+17403,Medium Blaster Battery,449,Mobile Hybrid Sentry
+17404,Small Blaster Battery,449,Mobile Hybrid Sentry
+17406,Large Pulse Laser Battery,430,Mobile Laser Sentry
+17407,Medium Pulse Laser Battery,430,Mobile Laser Sentry
+17408,Small Pulse Laser Battery,430,Mobile Laser Sentry
+17476,Covetor,463,Mining Barge
+17478,Retriever,463,Mining Barge
+17480,Procurer,463,Mining Barge
+17619,Caldari Navy Hookbill,25,Frigate
+17621,Corporate Hangar Array,471,Corporate Hangar Array
+17634,Caracal Navy Issue,26,Cruiser
+17636,Raven Navy Issue,27,Battleship
+17701,Tracking Array,473,Tracking Array
+17703,Imperial Navy Slicer,25,Frigate
+17709,Omen Navy Issue,26,Cruiser
+17713,Stabber Fleet Issue,26,Cruiser
+17715,Gila,26,Cruiser
+17718,Phantasm,26,Cruiser
+17720,Cynabal,26,Cruiser
+17722,Vigilant,26,Cruiser
+17726,Apocalypse Navy Issue,27,Battleship
+17728,Megathron Navy Issue,27,Battleship
+17732,Tempest Fleet Issue,27,Battleship
+17736,Nightmare,27,Battleship
+17738,Machariel,27,Battleship
+17740,Vindicator,27,Battleship
+17770,Large AutoCannon Battery,426,Mobile Projectile Sentry
+17771,Medium AutoCannon Battery,426,Mobile Projectile Sentry
+17772,Small AutoCannon Battery,426,Mobile Projectile Sentry
+17773,XL Torpedo Battery,417,Mobile Missile Sentry
+17812,Republic Fleet Firetail,25,Frigate
+17841,Federation Navy Comet,25,Frigate
+17843,Vexor Navy Issue,26,Cruiser
+17918,Rattlesnake,27,Battleship
+17920,Bhaalgorn,27,Battleship
+17922,Ashimmu,26,Cruiser
+17924,Succubus,25,Frigate
+17926,Cruor,25,Frigate
+17928,Daredevil,25,Frigate
+17930,Worm,25,Frigate
+17932,Dramiel,25,Frigate
+17982,Coupling Array,404,Silo
+19470,Intensive Reprocessing Array,311,Reprocessing Array
+19720,Revelation,485,Dreadnought
+19722,Naglfar,485,Dreadnought
+19724,Moros,485,Dreadnought
+19726,Phoenix,485,Dreadnought
+19744,Sigil,28,Hauler
+20059,Amarr Control Tower Medium,365,Control Tower
+20060,Amarr Control Tower Small,365,Control Tower
+20061,Caldari Control Tower Medium,365,Control Tower
+20062,Caldari Control Tower Small,365,Control Tower
+20063,Gallente Control Tower Medium,365,Control Tower
+20064,Gallente Control Tower Small,365,Control Tower
+20065,Minmatar Control Tower Medium,365,Control Tower
+20066,Minmatar Control Tower Small,365,Control Tower
+20125,Curse,906,Combat Recon Ship
+20175,Simple Reactor Array,438,Mobile Reactor
+20183,Providence,513,Freighter
+20185,Charon,513,Freighter
+20187,Obelisk,513,Freighter
+20189,Fenrir,513,Freighter
+21097,Goru's Shuttle,31,Shuttle
+21628,Guristas Shuttle,31,Shuttle
+22428,Redeemer,898,Black Ops
+22430,Sin,898,Black Ops
+22436,Widow,898,Black Ops
+22440,Panther,898,Black Ops
+22442,Eos,540,Command Ship
+22444,Sleipnir,540,Command Ship
+22446,Vulture,540,Command Ship
+22448,Absolution,540,Command Ship
+22452,Heretic,541,Interdictor
+22456,Sabre,541,Interdictor
+22460,Eris,541,Interdictor
+22464,Flycatcher,541,Interdictor
+22466,Astarte,540,Command Ship
+22468,Claymore,540,Command Ship
+22470,Nighthawk,540,Command Ship
+22474,Damnation,540,Command Ship
+22544,Hulk,543,Exhumer
+22546,Skiff,543,Exhumer
+22548,Mackinaw,543,Exhumer
+22634,Medium Biochemical Reactor Array,438,Mobile Reactor
+22852,Hel,659,Supercarrier
+23055,Templar I,1652,Light Fighter
+23057,Dragonfly I,1652,Light Fighter
+23059,Firbolg I,1652,Light Fighter
+23061,Einherji I,1652,Light Fighter
+23757,Archon,547,Carrier
+23773,Ragnarok,30,Titan
+23911,Thanatos,547,Carrier
+23913,Nyx,659,Supercarrier
+23915,Chimera,547,Carrier
+23917,Wyvern,659,Supercarrier
+23919,Aeon,659,Supercarrier
+24483,Nidhoggur,547,Carrier
+24567,Experimental Laboratory,413,Laboratory
+24574,Small Ship Assembly Array,397,Assembly Array
+24575,Supercapital Ship Assembly Array,397,Assembly Array
+24646,X-Large Ship Maintenance Array,363,Ship Maintenance Array
+24653,Advanced Small Ship Assembly Array,397,Assembly Array
+24654,Medium Ship Assembly Array,397,Assembly Array
+24655,Advanced Medium Ship Assembly Array,397,Assembly Array
+24656,Capital Ship Assembly Array,397,Assembly Array
+24657,Advanced Large Ship Assembly Array,397,Assembly Array
+24658,Ammunition Assembly Array,397,Assembly Array
+24659,Drone Assembly Array,397,Assembly Array
+24660,Component Assembly Array,397,Assembly Array
+24684,Biochemical Reactor Array,438,Mobile Reactor
+24688,Rokh,27,Battleship
+24690,Hyperion,27,Battleship
+24692,Abaddon,27,Battleship
+24694,Maelstrom,27,Battleship
+24696,Harbinger,419,Combat Battlecruiser
+24698,Drake,419,Combat Battlecruiser
+24700,Myrmidon,419,Combat Battlecruiser
+24702,Hurricane,419,Combat Battlecruiser
+25270,Biochemical Silo,404,Silo
+25271,Catalyst Silo,404,Silo
+25280,Hazardous Chemical Silo,404,Silo
+25305,Drug Lab,397,Assembly Array
+25821,General Storage,404,Silo
+26888,Mobile Large Warp Disruptor II,361,Mobile Warp Disruptor
+26890,Mobile Medium Warp Disruptor II,361,Mobile Warp Disruptor
+26892,Mobile Small Warp Disruptor II,361,Mobile Warp Disruptor
+27299,Civilian Amarr Shuttle,31,Shuttle
+27301,Civilian Caldari Shuttle,31,Shuttle
+27303,Civilian Gallente Shuttle,31,Shuttle
+27305,Civilian Minmatar Shuttle,31,Shuttle
+27530,Blood Control Tower,365,Control Tower
+27532,Dark Blood Control Tower,365,Control Tower
+27533,Guristas Control Tower,365,Control Tower
+27535,Dread Guristas Control Tower,365,Control Tower
+27536,Serpentis Control Tower,365,Control Tower
+27538,Shadow Control Tower,365,Control Tower
+27539,Angel Control Tower,365,Control Tower
+27540,Domination Control Tower,365,Control Tower
+27542,Serpentis Large Blaster Battery,449,Mobile Hybrid Sentry
+27544,Shadow Large Blaster Battery,449,Mobile Hybrid Sentry
+27545,Serpentis Large Railgun Battery,449,Mobile Hybrid Sentry
+27547,Shadow Large Railgun Battery,449,Mobile Hybrid Sentry
+27548,Blood Large Pulse Laser Battery,430,Mobile Laser Sentry
+27550,Dark Blood Large Pulse Laser Battery,430,Mobile Laser Sentry
+27551,Blood Large Beam Laser Battery,430,Mobile Laser Sentry
+27553,Dark Blood Large Beam Laser Battery,430,Mobile Laser Sentry
+27554,Angel Large AutoCannon Battery,426,Mobile Projectile Sentry
+27556,Domination Large AutoCannon Battery,426,Mobile Projectile Sentry
+27557,Angel Large Artillery Battery,426,Mobile Projectile Sentry
+27559,Domination Large Artillery Battery,426,Mobile Projectile Sentry
+27560,Guristas XL Torpedo Battery,417,Mobile Missile Sentry
+27562,Dread Guristas XL Torpedo Battery,417,Mobile Missile Sentry
+27563,Serpentis Warp Disruption Battery,443,Warp Scrambling Battery
+27565,Shadow Warp Disruption Battery,443,Warp Scrambling Battery
+27567,Serpentis Warp Scrambling Battery,443,Warp Scrambling Battery
+27569,Shadow Warp Scrambling Battery,443,Warp Scrambling Battery
+27570,Angel Stasis Webification Battery,441,Stasis Webification Battery
+27573,Domination Stasis Webification Battery,441,Stasis Webification Battery
+27574,Guristas Ion Field Projection Battery,439,Electronic Warfare Battery
+27576,Dread Guristas Ion Field Projection Battery,439,Electronic Warfare Battery
+27577,Guristas Phase Inversion Battery,439,Electronic Warfare Battery
+27579,Dread Guristas Phase Inversion Battery,439,Electronic Warfare Battery
+27580,Guristas Spatial Destabilization Battery,439,Electronic Warfare Battery
+27582,Dread Guristas Spatial Destabilization Battery,439,Electronic Warfare Battery
+27583,Guristas White Noise Generation Battery,439,Electronic Warfare Battery
+27585,Dread Guristas White Noise Generation Battery,439,Electronic Warfare Battery
+27589,Blood Control Tower Medium,365,Control Tower
+27591,Dark Blood Control Tower Medium,365,Control Tower
+27592,Blood Control Tower Small,365,Control Tower
+27594,Dark Blood Control Tower Small,365,Control Tower
+27595,Guristas Control Tower Medium,365,Control Tower
+27597,Dread Guristas Control Tower Medium,365,Control Tower
+27598,Guristas Control Tower Small,365,Control Tower
+27600,Dread Guristas Control Tower Small,365,Control Tower
+27601,Serpentis Control Tower Medium,365,Control Tower
+27603,Shadow Control Tower Medium,365,Control Tower
+27604,Serpentis Control Tower Small,365,Control Tower
+27606,Shadow Control Tower Small,365,Control Tower
+27607,Angel Control Tower Medium,365,Control Tower
+27609,Domination Control Tower Medium,365,Control Tower
+27610,Angel Control Tower Small,365,Control Tower
+27612,Domination Control Tower Small,365,Control Tower
+27613,Serpentis Medium Blaster Battery,449,Mobile Hybrid Sentry
+27615,Shadow Medium Blaster Battery,449,Mobile Hybrid Sentry
+27616,Serpentis Medium Railgun Battery,449,Mobile Hybrid Sentry
+27618,Shadow Medium Railgun Battery,449,Mobile Hybrid Sentry
+27619,Serpentis Small Blaster Battery,449,Mobile Hybrid Sentry
+27621,Shadow Small Blaster Battery,449,Mobile Hybrid Sentry
+27622,Serpentis Small Railgun Battery,449,Mobile Hybrid Sentry
+27624,Shadow Small Railgun Battery,449,Mobile Hybrid Sentry
+27625,Blood Medium Beam Laser Battery,430,Mobile Laser Sentry
+27627,Dark Blood Medium Beam Laser Battery,430,Mobile Laser Sentry
+27628,Blood Medium Pulse Laser Battery,430,Mobile Laser Sentry
+27630,Dark Blood Medium Pulse Laser Battery,430,Mobile Laser Sentry
+27631,Blood Small Beam Laser Battery,430,Mobile Laser Sentry
+27633,Dark Blood Small Beam Laser Battery,430,Mobile Laser Sentry
+27634,Blood Small Pulse Laser Battery,430,Mobile Laser Sentry
+27636,Dark Blood Small Pulse Laser Battery,430,Mobile Laser Sentry
+27638,Guristas Cruise Missile Battery,417,Mobile Missile Sentry
+27640,Dread Guristas Cruise Missile Battery,417,Mobile Missile Sentry
+27641,Guristas Torpedo Battery,417,Mobile Missile Sentry
+27643,Dread Guristas Torpedo Battery,417,Mobile Missile Sentry
+27644,Angel Medium Artillery Battery,426,Mobile Projectile Sentry
+27646,Domination Medium Artillery Battery,426,Mobile Projectile Sentry
+27647,Angel Medium AutoCannon Battery,426,Mobile Projectile Sentry
+27649,Domination Medium AutoCannon Battery,426,Mobile Projectile Sentry
+27650,Angel Small Artillery Battery,426,Mobile Projectile Sentry
+27652,Domination Small Artillery Battery,426,Mobile Projectile Sentry
+27653,Angel Small AutoCannon Battery,426,Mobile Projectile Sentry
+27655,Domination Small AutoCannon Battery,426,Mobile Projectile Sentry
+27672,Energy Neutralizing Battery,837,Energy Neutralizing Battery
+27673,Cynosural Generator Array,838,Cynosural Generator Array
+27674,Cynosural System Jammer,839,Cynosural System Jammer
+27675,System Scanning Array,709,Scanner Array
+27766,Sansha Large Beam Laser Battery,430,Mobile Laser Sentry
+27767,Sansha Large Pulse Laser Battery,430,Mobile Laser Sentry
+27768,Sansha Medium Beam Laser Battery,430,Mobile Laser Sentry
+27769,Sansha Medium Pulse Laser Battery,430,Mobile Laser Sentry
+27770,Sansha Small Beam Laser Battery,430,Mobile Laser Sentry
+27771,Sansha Small Pulse Laser Battery,430,Mobile Laser Sentry
+27772,True Sansha Large Beam Laser Battery,430,Mobile Laser Sentry
+27773,True Sansha Large Pulse Laser Battery,430,Mobile Laser Sentry
+27774,True Sansha Medium Beam Laser Battery,430,Mobile Laser Sentry
+27775,True Sansha Medium Pulse Laser Battery,430,Mobile Laser Sentry
+27776,True Sansha Small Beam Laser Battery,430,Mobile Laser Sentry
+27777,True Sansha Small Pulse Laser Battery,430,Mobile Laser Sentry
+27778,Serpentis Sensor Dampening Battery,440,Sensor Dampening Battery
+27779,Shadow Sensor Dampening Battery,440,Sensor Dampening Battery
+27780,Sansha Control Tower,365,Control Tower
+27782,Sansha Control Tower Medium,365,Control Tower
+27784,Sansha Control Tower Small,365,Control Tower
+27786,True Sansha Control Tower,365,Control Tower
+27788,True Sansha Control Tower Medium,365,Control Tower
+27790,True Sansha Control Tower Small,365,Control Tower
+27855,Sansha Energy Neutralizing Battery,837,Energy Neutralizing Battery
+27856,True Sansha Energy Neutralizing Battery,837,Energy Neutralizing Battery
+27857,Blood Energy Neutralizing Battery,837,Energy Neutralizing Battery
+27858,Dark Blood Energy Neutralizing Battery,837,Energy Neutralizing Battery
+27897,Jump Bridge,707,Jump Portal Array
+28351,Design Laboratory,413,Laboratory
+28352,Rorqual,883,Capital Industrial Ship
+28606,Orca,941,Industrial Command Ship
+28659,Paladin,900,Marauder
+28661,Kronos,900,Marauder
+28665,Vargur,900,Marauder
+28710,Golem,900,Marauder
+28770,Syndicate Mobile Large Warp Disruptor,361,Mobile Warp Disruptor
+28772,Syndicate Mobile Medium Warp Disruptor,361,Mobile Warp Disruptor
+28774,Syndicate Mobile Small Warp Disruptor,361,Mobile Warp Disruptor
+28844,Rhea,902,Jump Freighter
+28846,Nomad,902,Jump Freighter
+28848,Anshar,902,Jump Freighter
+28850,Ark,902,Jump Freighter
+29248,Magnate,25,Frigate
+29266,Apotheosis,31,Shuttle
+29336,Scythe Fleet Issue,26,Cruiser
+29337,Augoror Navy Issue,26,Cruiser
+29340,Osprey Navy Issue,26,Cruiser
+29344,Exequror Navy Issue,26,Cruiser
+29613,Large Ship Assembly Array,397,Assembly Array
+29984,Tengu,963,Strategic Cruiser
+29986,Legion,963,Strategic Cruiser
+29988,Proteus,963,Strategic Cruiser
+29990,Loki,963,Strategic Cruiser
+30389,Subsystem Assembly Array,397,Assembly Array
+30655,Hybrid Polymer Silo,404,Silo
+30656,Polymer Reactor Array,438,Mobile Reactor
+30842,InterBus Shuttle,31,Shuttle
+32226,Territorial Claim Unit,1003,Territorial Claim Unit
+32245,Hyasyoda Research Laboratory,413,Laboratory
+32250,Sovereignty Blockade Unit,1005,Sovereignty Blockade Unit
+32305,Armageddon Navy Issue,27,Battleship
+32307,Dominix Navy Issue,27,Battleship
+32309,Scorpion Navy Issue,27,Battleship
+32311,Typhoon Fleet Issue,27,Battleship
+32325,Cyclops I,1653,Heavy Fighter
+32340,Malleus I,1653,Heavy Fighter
+32342,Tyrfing I,1653,Heavy Fighter
+32344,Mantis I,1653,Heavy Fighter
+32458,Infrastructure Hub,1012,Infrastructure Hub
+32788,Cambion,324,Assault Frigate
+32790,Etana,832,Logistics
+32811,Miasmos Amastris Edition,28,Hauler
+32840,InterBus Catalyst,420,Destroyer
+32842,Intaki Syndicate Catalyst,420,Destroyer
+32844,Inner Zone Shipping Catalyst,420,Destroyer
+32846,Quafe Catalyst,420,Destroyer
+32848,Aliastra Catalyst,420,Destroyer
+32872,Algos,420,Destroyer
+32874,Dragoon,420,Destroyer
+32876,Corax,420,Destroyer
+32878,Talwar,420,Destroyer
+32880,Venture,25,Frigate
+32983,Sukuuvestaa Heron,25,Frigate
+32985,Inner Zone Shipping Imicus,25,Frigate
+32987,Sarum Magnate,25,Frigate
+32989,Vherokior Probe,25,Frigate
+33079,Hematos,237,Corvette
+33081,Taipan,237,Corvette
+33083,Violator,237,Corvette
+33099,Nefantar Thrasher,420,Destroyer
+33149,Personal Hangar Array,1212,Personal Hangar
+33151,Brutix Navy Issue,419,Combat Battlecruiser
+33153,Drake Navy Issue,419,Combat Battlecruiser
+33155,Harbinger Navy Issue,419,Combat Battlecruiser
+33157,Hurricane Fleet Issue,419,Combat Battlecruiser
+33190,Tash-Murkon Magnate,25,Frigate
+33328,Capsule - Genolution 'Auroral' 197-variant,29,Capsule
+33395,Moracha,833,Force Recon Ship
+33397,Chremoas,830,Covert Ops
+33468,Astero,25,Frigate
+33470,Stratios,26,Cruiser
+33472,Nestor,27,Battleship
+33474,Mobile Depot,1246,Mobile Depot
+33475,Mobile Tractor Unit,1250,Mobile Tractor Unit
+33476,Mobile Cynosural Inhibitor,1249,Mobile Cyno Inhibitor
+33477,Small Mobile Siphon Unit,1247,Mobile Siphon Unit
+33513,Leopard,31,Shuttle
+33520,'Wetu' Mobile Depot,1246,Mobile Depot
+33522,'Yurt' Mobile Depot,1246,Mobile Depot
+33581,Small Mobile 'Hybrid' Siphon Unit,1247,Mobile Siphon Unit
+33583,Small Mobile 'Rote' Siphon Unit,1247,Mobile Siphon Unit
+33585,Amarr Encounter Surveillance System,1273,Encounter Surveillance System
+33589,Mobile Scan Inhibitor,1275,Mobile Scan Inhibitor
+33591,Mobile Micro Jump Unit,1276,Mobile Micro Jump Unit
+33595,Caldari Encounter Surveillance System,1273,Encounter Surveillance System
+33608,Gallente Encounter Surveillance System,1273,Encounter Surveillance System
+33610,Minmatar Encounter Surveillance System,1273,Encounter Surveillance System
+33623,Abaddon Tash-Murkon Edition,27,Battleship
+33625,Abaddon Kador Edition,27,Battleship
+33627,Rokh Nugoeihuvi Edition,27,Battleship
+33629,Rokh Wiyrkomi Edition,27,Battleship
+33631,Maelstrom Nefantar Edition,27,Battleship
+33633,Maelstrom Krusual Edition,27,Battleship
+33635,Hyperion Aliastra Edition,27,Battleship
+33637,Hyperion Inner Zone Shipping Edition,27,Battleship
+33639,Omen Kador Edition,26,Cruiser
+33641,Omen Tash-Murkon Edition,26,Cruiser
+33643,Caracal Nugoeihuvi Edition,26,Cruiser
+33645,Caracal Wiyrkomi Edition,26,Cruiser
+33647,Stabber Nefantar Edition,26,Cruiser
+33649,Stabber Krusual Edition,26,Cruiser
+33651,Thorax Aliastra Edition,26,Cruiser
+33653,Thorax Inner Zone Shipping Edition,26,Cruiser
+33655,Punisher Kador Edition,25,Frigate
+33657,Punisher Tash-Murkon Edition,25,Frigate
+33659,Merlin Nugoeihuvi Edition,25,Frigate
+33661,Merlin Wiyrkomi Edition,25,Frigate
+33663,Rifter Nefantar Edition,25,Frigate
+33665,Rifter Krusual Edition,25,Frigate
+33667,Incursus Aliastra Edition,25,Frigate
+33669,Incursus Inner Zone Shipping Edition,25,Frigate
+33673,Whiptail,831,Interceptor
+33675,Chameleon,833,Force Recon Ship
+33677,Police Pursuit Comet,25,Frigate
+33683,Mackinaw ORE Development Edition,543,Exhumer
+33687,Rorqual ORE Development Edition,883,Capital Industrial Ship
+33689,Iteron Inner Zone Shipping Edition,28,Hauler
+33691,Tayra Wiyrkomi Edition,28,Hauler
+33693,Mammoth Nefantar Edition,28,Hauler
+33695,Bestower Tash-Murkon Edition,28,Hauler
+33697,Prospect,1283,Expedition Frigate
+33700,'Packrat' Mobile Tractor Unit,1250,Mobile Tractor Unit
+33702,'Magpie' Mobile Tractor Unit,1250,Mobile Tractor Unit
+33816,Garmur,25,Frigate
+33818,Orthrus,26,Cruiser
+33820,Barghest,27,Battleship
+33867,Thukker Component Assembly Array,397,Assembly Array
+33869,Brutix Serpentis Edition,419,Combat Battlecruiser
+33871,Cyclone Thukker Tribe Edition,419,Combat Battlecruiser
+33873,Ferox Guristas Edition,419,Combat Battlecruiser
+33875,Prophecy Blood Raiders Edition,419,Combat Battlecruiser
+33877,Catalyst Serpentis Edition,420,Destroyer
+33879,Coercer Blood Raiders Edition,420,Destroyer
+33881,Cormorant Guristas Edition,420,Destroyer
+33883,Thrasher Thukker Tribe Edition,420,Destroyer

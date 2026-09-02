@@ -148,6 +148,20 @@ for (f in sde_b_files) {
   extract_sde_snapshot(f, sprintf("data/processed/sde/window_b_%s", id_str))
 }
 
+extract_group_ids <- function(zip_path, out_path) {
+  all_names <- unzip(zip_path, list = TRUE)$Name
+  groups_path <- grep("(^|/)groupIDs\\.yaml$", all_names, value = TRUE)[1]
+  tmp_dir <- "data/raw/_tmp_sde"
+  unlink(tmp_dir, recursive = TRUE)
+  unzip(zip_path, files = groups_path, exdir = tmp_dir)
+  saveRDS(read_yaml_safe(file.path(tmp_dir, groups_path)), out_path)
+  unlink(tmp_dir, recursive = TRUE)
+  message("Saved group definitions from: ", zip_path)
+}
+
+latest_sde_b_zip <- sde_b_files[which.max(regmatches(basename(sde_b_files), regexpr("\\d{8}", basename(sde_b_files))))]
+extract_group_ids(latest_sde_b_zip, "data/processed/sde/group_ids.rds")
+
 # Wars
 
 parse_tar_bytes_wars <- function(raw_bytes) {

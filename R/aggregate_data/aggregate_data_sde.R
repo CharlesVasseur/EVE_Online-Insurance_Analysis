@@ -118,3 +118,17 @@ fwrite(types_b_filtered, "data/aggregated/sde_types_window_b.csv")
 
 message(sprintf("Window A types: %d -> %d rows | Window B types: %d -> %d rows",
                 nrow(types_a_full), nrow(types_a_filtered), nrow(types_b_full), nrow(types_b_filtered)))
+
+flatten_groups <- function(groups_list) {
+  ids <- names(groups_list)
+  names_vec <- sapply(groups_list, function(g) {
+    n <- g$name$en %||% g$name %||% NA
+    if (is.list(n)) NA else n
+  })
+  data.table(group_id = as.integer(ids), group_name = names_vec)
+}
+
+group_ids_raw <- readRDS("data/processed/sde/group_ids.rds")
+sde_groups <- flatten_groups(group_ids_raw)
+fwrite(sde_groups, "data/aggregated/sde_groups.csv")
+message(sprintf("Group definitions: %d rows", nrow(sde_groups)))
