@@ -1,7 +1,7 @@
 source("R/load_data.R")
 
-loss_ratio__weekly_window_a <- fread("data/model_output/loss_ratio_weekly_window_a.csv")
-loss_ratio__weekly_window_b <- fread("data/model_output/loss_ratio_weekly_window_b.csv")
+loss_ratio_weekly_window_a <- fread("data/model_output/loss_ratio_weekly_window_a.csv")
+loss_ratio_weekly_window_b <- fread("data/model_output/loss_ratio_weekly_window_b.csv")
 loss_ratio_daily_window_a <- fread("data/model_output/loss_ratio_daily_window_a.csv")
 loss_ratio_daily_window_b <- fread("data/model_output/loss_ratio_daily_window_b.csv")
 
