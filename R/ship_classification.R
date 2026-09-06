@@ -16,6 +16,11 @@ message(sprintf("Window A: %d of %d ship types still unclassified after backfill
 sde_types_window_b_classified <- sde_types_window_b %>%
   left_join(sde_groups, by = "group_id")
 
+sde_types_window_b_classified <- unique(sde_types_window_b_classified, by = "type_id")
+nrow(sde_types_window_b_classified)
+
+sde_types_window_b_classified[group_name == "Dreadnought", .N]
+
 n_missing_b <- sum(is.na(sde_types_window_b_classified$group_name))
 message(sprintf("Window B: %d of %d ship types missing a group name",
                 n_missing_b, nrow(sde_types_window_b_classified)))
