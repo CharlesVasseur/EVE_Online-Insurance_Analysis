@@ -1,5 +1,5 @@
-source("R/load_data.R")
-source("R/war_dates_function.R")
+source("R/shared_functions/load_data.R")
+source("R/shared_functions/war_dates_function.R")
 
 loss_ratio_weekly_window_a <- fread("data/model_output/loss_ratio_weekly_window_a.csv")
 loss_ratio_weekly_window_b <- fread("data/model_output/loss_ratio_weekly_window_b.csv")

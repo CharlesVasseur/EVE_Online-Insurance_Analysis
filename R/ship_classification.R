@@ -1,4 +1,4 @@
-source("R/load_data.R")
+source("R/shared_functions/load_data.R")
 
 sde_groups <- fread("data/aggregated/sde_groups.csv")
 

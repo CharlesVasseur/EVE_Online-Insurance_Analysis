@@ -1,4 +1,4 @@
-source("R/load_data.R")
+source("R/shared_functions/load_data.R")
 
 summary(daily_losses_window_a)
 summary(daily_losses_window_b)
