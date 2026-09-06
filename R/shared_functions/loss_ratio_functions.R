@@ -1,9 +1,8 @@
 ### Weekly Loss Ratio
-
-aggregate_weekly <- function(hull_values) {
+aggregate_weekly <- function(hull_values, payout_col = "estimated_hull_value") {
   hv <- as.data.table(hull_values)
   hv[, week_start := floor_date(date, unit = "week", week_start = 6)]
-  hv[, .(total_payout = sum(estimated_hull_value)), by = week_start]
+  hv[, .(total_payout = sum(get(payout_col))), by = week_start]
 }
 
 compute_loss_ratio <- function(weekly, window_weeks = 12) {
@@ -14,10 +13,9 @@ compute_loss_ratio <- function(weekly, window_weeks = 12) {
 }
 
 ### Daily Loss Ratio
-
-aggregate_daily <- function(hull_values) {
+aggregate_daily <- function(hull_values, payout_col = "estimated_hull_value") {
   hv <- as.data.table(hull_values)
-  hv[, .(total_payout = sum(estimated_hull_value)), by = date]
+  hv[, .(total_payout = sum(get(payout_col))), by = date]
 }
 
 compute_loss_ratio_daily <- function(daily, window_days = 84) {
