@@ -1,5 +1,4 @@
-source("R/shared_functions/load_data.R")
-source("R/shared_functions/loss_ratio_functions.R")
+source("R/shared_functions.R")
 
 hull_value_window_a <- fread("data/model_output/hull_value_window_a.csv")
 hull_value_window_b <- fread("data/model_output/hull_value_window_b.csv")

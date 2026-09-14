@@ -1,6 +1,4 @@
-source("R/shared_functions/load_data.R")
-source("R/shared_functions/loss_ratio_functions.R")
-source("R/shared_functions/war_dates_function.R")
+source("R/shared_functions.R")
 
 hull_value_window_b <- fread("data/model_output/hull_value_window_b.csv")
 hull_value_window_b$date <- as.Date(hull_value_window_b$date)

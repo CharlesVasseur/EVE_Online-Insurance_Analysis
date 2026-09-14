@@ -1,4 +1,4 @@
-source("R/shared_functions/load_data.R")
+source("R/shared_functions.R")
 
 ### As-of join
 
