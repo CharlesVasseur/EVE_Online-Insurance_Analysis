@@ -1,7 +1,7 @@
 library(ggplot2)
 
-source("R/shared_functions/load_data.R")
-source("R/shared_functions/war_dates_function.R")
+source("R/shared_functions.R")
+
 
 loss_ratio_window_a <- fread("data/model_output/loss_ratio_weekly_window_a.csv")
 loss_ratio_window_b <- fread("data/model_output/loss_ratio_weekly_window_b.csv")
@@ -143,7 +143,10 @@ graph_4 <- ggplot(magnitude_long, aes(x = war_name, y = isk / 1e9, fill = scenar
   labs(title = "Modeled Insurer Liability: Baseline vs. Dreadnought-Adjusted",
        subtitle = "Average daily payout during each war, billion ISK",
        x = NULL, y = "Avg. daily payout (billion ISK)", fill = NULL) +
-  theme_project + theme(axis.text.x = element_text(angle = 20, hjust = 1))
+  theme_project + theme(axis.text.x = element_text(angle = 20, hjust = 1)) + 
+  geom_text(aes(label = round(isk / 1e9, 1)),
+            position = position_dodge(width = 0.75),
+            vjust = -0.4, size = 3.2, color = "grey20")
 
 graph_4
 ggsave("output/figures/dreadnought_scenario.png", graph_4, width = 9, height = 5.5)
