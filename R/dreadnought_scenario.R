@@ -12,6 +12,9 @@ sde_types_window_b_classified <- fread("data/aggregated/sde_types_window_b_class
 
 ### Dreadnought payout rate
 
+dreadnought_ids_a <- sde_types_window_a_classified[group_name == "Dreadnought", type_id]
+dreadnought_ids_b <- sde_types_window_b_classified[group_name == "Dreadnought", type_id]
+
 dreadnought_real_rate <- 0.15
 
 apply_dreadnought_adjustment <- function(hull_values, dreadnought_ids, real_rate) {
@@ -47,11 +50,11 @@ adjusted_daily_a <- compute_loss_ratio_daily(aggregate_daily(hv_adj_a, "adjusted
 baseline_daily_b <- compute_loss_ratio_daily(aggregate_daily(hv_adj_b, "estimated_hull_value"))
 adjusted_daily_b <- compute_loss_ratio_daily(aggregate_daily(hv_adj_b, "adjusted_payout"))
 
-comparison_daily_a <- merge(baseline_daily_a[, .(date, baseline_ratio = loss_ratio)],
-                            adjusted_daily_a[, .(date, adjusted_ratio = loss_ratio)],
+comparison_daily_a <- merge(baseline_daily_a[, .(date, baseline_payout = total_payout, baseline_ratio = loss_ratio)],
+                            adjusted_daily_a[, .(date, adjusted_payout = total_payout, adjusted_ratio = loss_ratio)],
                             by = "date")
-comparison_daily_b <- merge(baseline_daily_b[, .(date, baseline_ratio = loss_ratio)],
-                            adjusted_daily_b[, .(date, adjusted_ratio = loss_ratio)],
+comparison_daily_b <- merge(baseline_daily_b[, .(date, baseline_payout = total_payout, baseline_ratio = loss_ratio)],
+                            adjusted_daily_b[, .(date, adjusted_payout = total_payout, adjusted_ratio = loss_ratio)],
                             by = "date")
 
 fwrite(comparison_daily_a, "data/model_output/dreadnought_scenario_daily_window_a.csv")
