@@ -47,7 +47,7 @@ graph_1 <- graph_1 +
 graph_1
 ggsave("output/figures/loss_ratio_overview.png", graph_1, width = 12, height = 6)
 
-### Daily Zoom Loss Ratio
+### Graph 2: Daily Zoom Loss Ratio
 
 zoom_window <- function(daily, event_date, buffer_days = 14, event_label) {
   daily[date >= event_date - buffer_days & date <= event_date + buffer_days][, event := event_label]
@@ -84,7 +84,7 @@ graph_2
 
 ggsave("output/figures/short_war_zoom.png", graph_2, width = 10, height = 5)
 
-### War Case Study Summary
+### Graph 3: War Case Study Summary
 
 war_summary_long <- melt(war_case_studies_daily,
                          id.vars = "war_name",
@@ -148,26 +148,23 @@ graph_4 <- ggplot(magnitude_long, aes(x = war_name, y = isk / 1e9, fill = scenar
 graph_4
 ggsave("output/figures/dreadnought_scenario.png", graph_4, width = 9, height = 5.5)
 
-### MER cross-check
+### Graph 5: MER cross-check
 
-mer_indexed <- copy(mer_cross_check)
-mer_indexed[, modeled_index := modeled_adjusted_payout / mean(modeled_adjusted_payout, na.rm = TRUE)]
-mer_indexed[, real_index    := insurance_net_isk / mean(insurance_net_isk, na.rm = TRUE)]
+mer_indexed[, modeled_smooth := frollmean(modeled_index, 30, align = "right")]
+mer_indexed[, real_smooth := frollmean(real_index, 30, align = "right")]
 
-mer_long <- melt(mer_indexed, id.vars = "date",
-                 measure.vars = c("modeled_index", "real_index"),
-                 variable.name = "series", value.name = "index")
-mer_long[, series := factor(series, levels = c("modeled_index", "real_index"),
-                            labels = c("Modeled payout (indexed)", "Real MER net insurance (indexed)"))]
+mer_indexed[, real_smooth_capped := pmax(real_smooth, -2)]
 
-graph_5 <- ggplot(mer_long, aes(x = date, y = index, color = series)) +
-  geom_line(linewidth = 0.4, alpha = 0.8) +
-  scale_color_manual(values = c("Modeled payout (indexed)" = "#4472C4",
-                                "Real MER net insurance (indexed)" = war_color)) +
-  labs(title = "Modeled Payout vs. CCP's Real Published Insurance Flow",
-       subtitle = "Indexed to each series' own mean - shape comparison only (r \u2248 0.14, not a validated match)",
+mer_smooth_long <- melt(mer_indexed, id.vars = "date",
+                        measure.vars = c("modeled_smooth", "real_smooth_capped"),
+                        variable.name = "series", value.name = "index")
+
+graph_5 <- ggplot(mer_smooth_long, aes(x = date, y = index, color = series)) +
+  geom_line(linewidth = 0.6) +
+  labs(title = "Modeled Payout vs. Real MER Net Insurance (30-day smoothed)",
+       subtitle = "r \u2248 0.14 (daily)",
        x = NULL, y = "Index (mean = 1.0)", color = NULL) +
   theme_project
 
 graph_5
-ggsave("output/figures/mer_cross_check.png", graph_5, width = 12, height = 6)
+ggsave("output/figures/mer_cross_check.png", graph_5, width = 9, height = 5.5)
