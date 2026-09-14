@@ -1,5 +1,5 @@
-source("R/load_data.R")
-source("R/loss_ratio_functions.R")
+source("R/shared_functions/load_data.R")
+source("R/shared_functions/loss_ratio_functions.R")
 
 hull_value_window_a <- fread("data/model_output/hull_value_window_a.csv")
 hull_value_window_b <- fread("data/model_output/hull_value_window_b.csv")
@@ -17,6 +17,9 @@ loss_ratio_b <- compute_loss_ratio(weekly_b)
 
 loss_ratio_a <- loss_ratio_a[!is.na(loss_ratio)]
 loss_ratio_b <- loss_ratio_b[!is.na(loss_ratio)]
+
+loss_ratio_a <- loss_ratio_a[is_complete_week == TRUE]
+loss_ratio_b <- loss_ratio_b[is_complete_week == TRUE]
 
 fwrite(loss_ratio_a, "data/model_output/loss_ratio_weekly_window_a.csv")
 fwrite(loss_ratio_b, "data/model_output/loss_ratio_weekly_window_b.csv")
