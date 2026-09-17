@@ -2,14 +2,19 @@ library(ggplot2)
 
 source("R/shared_functions.R")
 
-
 loss_ratio_window_a <- fread("data/model_output/loss_ratio_weekly_window_a.csv")
 loss_ratio_window_b <- fread("data/model_output/loss_ratio_weekly_window_b.csv")
 loss_ratio_daily_a  <- fread("data/model_output/loss_ratio_daily_window_a.csv")
 loss_ratio_daily_b  <- fread("data/model_output/loss_ratio_daily_window_b.csv")
 war_case_studies_daily <- fread("data/model_output/war_case_studies_daily.csv")
-dreadnought_daily_b <- fread("data/model_output/dreadnought_scenario_daily_window_b.csv")
 mer_cross_check <- fread("data/model_output/mer_cross_check_daily.csv")
+dreadnought_daily_a <- fread("data/model_output/dreadnought_scenario_daily_window_a.csv")
+dreadnought_daily_b <- fread("data/model_output/dreadnought_scenario_daily_window_b.csv")
+loss_ratio_by_class_window_a <- fread("data/model_output/loss_ratio_by_class_window_a.csv")
+loss_ratio_by_class_window_b <- fread("data/model_output/loss_ratio_by_class_window_b.csv")
+
+dreadnought_daily_a$date <- as.Date(dreadnought_daily_a$date)
+dreadnought_daily_b$date <- as.Date(dreadnought_daily_b$date)
 
 dir.create("output/figures", recursive = TRUE, showWarnings = FALSE)
 
@@ -18,15 +23,16 @@ dir.create("output/figures", recursive = TRUE, showWarnings = FALSE)
 theme_project <- theme_minimal(base_size = 12) +
   theme(plot.title = element_text(face = "bold"),
         panel.grid.minor = element_blank())
+
 war_color <- "#B22222"
+
+window_labels <- c(a = "Window A (2011-2015)", b = "Window B (2018-2022)")
 
 ### Graph 1: Weekly Loss Ratio Overview
 
 loss_ratio_window_a[, window := "a"]
 loss_ratio_window_b[, window := "b"]
 combined_weekly <- rbind(loss_ratio_window_a, loss_ratio_window_b)
-
-window_labels <- c(a = "Window A (2011-2015)", b = "Window B (2018-2022)")
 
 graph_1 <- ggplot(combined_weekly, aes(x = week_start, y = loss_ratio)) +
   geom_rect(data = war_dates, inherit.aes = FALSE,
@@ -38,11 +44,9 @@ graph_1 <- ggplot(combined_weekly, aes(x = week_start, y = loss_ratio)) +
   labs(title = "Modeled Insurance Loss Ratio Over Time",
        subtitle = "Shaded bands mark documented wars. Dashed line = break-even (ratio = 1).",
        x = NULL, y = "Loss ratio") +
-  theme_project
-
-graph_1 <- graph_1 +
   scale_x_date(date_breaks = "6 months", date_labels = "%b %Y") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  theme_project
 
 graph_1
 ggsave("output/figures/loss_ratio_overview.png", graph_1, width = 12, height = 6)
@@ -74,12 +78,11 @@ graph_2 <- ggplot(zoom_combined, aes(x = date, y = loss_ratio)) +
   labs(title = "Daily Loss Ratio Around Short, Sudden War Events",
        subtitle = "Weekly resolution misses these entirely - daily data reveals the spike.",
        x = NULL, y = "Loss ratio (daily)") +
+  geom_vline(data = event_dates[start_date == end_date],
+             aes(xintercept = start_date), color = war_color, linewidth = 0.8) +
   theme_project
 
-graph_2 <- graph_2 +
-  geom_vline(data = event_dates[start_date == end_date],
-             aes(xintercept = start_date), color = war_color, linewidth = 0.8)
-
+  
 graph_2
 
 ggsave("output/figures/short_war_zoom.png", graph_2, width = 10, height = 5)
@@ -110,11 +113,6 @@ graph_3
 ggsave("output/figures/war_case_studies.png", graph_3, width = 9, height = 5.5)
 
 ### Graph 4: Dreadnought Adjusted Comparison
-
-dreadnought_daily_a <- fread("data/model_output/dreadnought_scenario_daily_window_a.csv")
-dreadnought_daily_b <- fread("data/model_output/dreadnought_scenario_daily_window_b.csv")
-dreadnought_daily_a$date <- as.Date(dreadnought_daily_a$date)
-dreadnought_daily_b$date <- as.Date(dreadnought_daily_b$date)
 
 compute_payout_magnitude <- function(war_dates, comparison_daily, window_id) {
   wd <- war_dates[window == window_id]
@@ -153,6 +151,10 @@ ggsave("output/figures/dreadnought_scenario.png", graph_4, width = 9, height = 5
 
 ### Graph 5: MER cross-check
 
+mer_indexed <- copy(mer_cross_check)
+mer_indexed[, modeled_index := modeled_adjusted_payout / mean(modeled_adjusted_payout, na.rm = TRUE)]
+mer_indexed[, real_index    := insurance_net_isk / mean(insurance_net_isk, na.rm = TRUE)]
+
 mer_indexed[, modeled_smooth := frollmean(modeled_index, 30, align = "right")]
 mer_indexed[, real_smooth := frollmean(real_index, 30, align = "right")]
 
@@ -171,3 +173,26 @@ graph_5 <- ggplot(mer_smooth_long, aes(x = date, y = index, color = series)) +
 
 graph_5
 ggsave("output/figures/mer_cross_check.png", graph_5, width = 9, height = 5.5)
+
+### Graph 6: Loss Ratio per ship Class
+
+loss_ratio_by_class_window_a[, window := "a"]
+loss_ratio_by_class_window_b[, window := "b"]
+combined_class <- rbind(loss_ratio_by_class_window_a, loss_ratio_by_class_window_b)
+
+graph_6 <- ggplot(combined_class, aes(x = month_start, y = loss_ratio)) +
+  geom_rect(data = war_dates, inherit.aes = FALSE,
+            aes(xmin = start_date, xmax = end_date, ymin = -Inf, ymax = Inf),
+            fill = war_color, alpha = 0.12) +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "black") +
+  geom_line(color = "grey20", linewidth = 0.4) +
+  facet_grid(group_name ~ window, scales = "free", space = "free_x",
+             labeller = labeller(window = window_labels)) +
+  labs(title = "Loss Ratio by Ship Class",
+       subtitle = "Monthly resolution, 3-month trailing baseline - not directly comparable in scale to the fleet-wide weekly ratio",
+       x = NULL, y = "Loss ratio") +
+  theme_project +
+  theme(strip.text.y = element_text(angle = 0, size = 8))
+
+graph_6
+ggsave("output/figures/loss_ratio_by_class.png", graph_6, width = 11, height = 10)
