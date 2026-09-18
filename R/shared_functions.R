@@ -32,6 +32,8 @@ mineral_ids <- c(34, 35, 36, 37, 38, 39, 40, 11399)
 
 # War Dates
 
+### Studied Wars
+
 war_dates <- data.table(
   war_name      = c("Battle of Asakai", "Fountain War", "Bloodbath of B-R5RB",
                     "World War Bee II (Casino War)", "Massacre at M2-XFE"),
@@ -41,6 +43,14 @@ war_dates <- data.table(
   baseline_type = c("pre_war", "pre_war", "pre_war", "pre_war", "war_own_average"),
   parent_war    = c(NA, NA, NA, NA, "World War Bee II (Casino War)")
 )
+
+### Short Events
+
+war_dates[, duration_days := as.numeric(end_date - start_date)]
+war_dates[, is_short_event := duration_days <= 7]
+war_dates[, midpoint_date := start_date + duration_days / 2]
+
+war_dates[, .(war_name, duration_days, is_short_event, baseline_type)]
 
 # Loss Ratio Functions
 
